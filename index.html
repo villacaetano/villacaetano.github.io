@@ -4,14 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Villa Caetano</title>
-
-  <!-- ========================
-       GLOBAL STYLES
-       Edit fonts, colors, spacing here.
-  ========================= -->
   <style>
-    :root{
-      /* Easy color tweaks */
+    :root {
       --brand-dark: #696969;
       --brand-mid:  #808080;
       --bg-soft:    #f4f4f4;
@@ -20,51 +14,64 @@
       --google-blue-hover: #3367d6;
     }
 
-    /* Base layout */
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #111; }
     section { padding: 40px 20px; text-align: center; }
 
-    /* Header / Logo */
+    /* Header */
     header { background: var(--brand-dark); padding: 20px; text-align: center; }
     header img { height: 60px; width: auto; }
 
     /* Footer */
     footer { background: var(--brand-mid); padding: 20px; text-align: center; font-size: 14px; color: #fff; }
 
-    /* Social icons (strip above footer) */
+    /* Social strips */
     .social-icons {
-      text-align: center; padding: 20px 0; background: var(--bg-soft);
+      text-align: center;
+      padding: 20px 0;
+      background: var(--bg-soft);
     }
-    .social-icons a { display: inline-block; margin: 0 10px; }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 12px;
+    }
     .social-icons img {
-      width: 28px; height: 28px; vertical-align: middle; cursor: pointer;
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
       transition: transform 0.2s ease;
     }
     .social-icons img:hover { transform: scale(1.2); }
 
-    /* Map embed (small 400×250 card) */
+    /* Map (small rectangle) */
     .map-container {
-      max-width: 400px; height: 250px; margin: 0 auto; border-radius: 12px;
-      box-shadow: var(--card-shadow); overflow: hidden; background: #eee;
+      max-width: 400px;
+      height: 250px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      background: #eee;
     }
     .map-container iframe { width: 100%; height: 100%; border: 0; }
 
-    /* Reviews section (button only) */
+    /* Reviews */
     #reviews { background: #f9f9f9; }
-    #reviews h2 {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 1.6rem; margin-bottom: 10px;
-    }
+    #reviews h2 { display: inline-flex; align-items: center; gap: 8px; font-size: 1.6rem; margin-bottom: 10px; }
     #reviews h2 img { width: 28px; height: 28px; }
     #reviews p.sub { margin-top: 0; color: #444; }
     .button {
-      display: inline-block; background: var(--google-blue); color: #fff;
-      padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 700;
+      display: inline-block;
+      background: var(--google-blue);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
       transition: background 0.2s ease;
     }
     .button:hover { background: var(--google-blue-hover); }
 
-    /* Mobile tweaks */
+    /* Mobile */
     @media (max-width: 600px) {
       .social-icons img { width: 34px; height: 34px; }
       .map-container { max-width: 90%; height: 220px; }
@@ -72,43 +79,46 @@
   </style>
 </head>
 <body>
-
-  <!-- ========================
-       HEADER / LOGO
-       Replace the logo path if needed.
-  ========================= -->
+  <!-- HEADER -->
   <header>
     <img src="assets/img/logo/heading-logo.png" alt="Villa Caetano Logo" />
   </header>
 
-  <!-- ========================
-       HERO SECTION
-       Edit the main headline & subtext.
-  ========================= -->
+  <!-- HERO -->
   <section id="hero">
     <h1>Welcome to Villa Caetano Goa</h1>
     <p>Your home away from home. Relax, unwind, and enjoy your stay.</p>
   </section>
 
-  <!-- ========================
-       ABOUT SECTION (HIDDEN)
-       To show this section: remove the <!-- and --> comment markers.
-  ========================= -->
-  <!--
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Villa Caetano Homestay offers cozy rooms, modern amenities, and a peaceful atmosphere
-      for families, friends, and travelers alike.
-    </p>
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <h2>
+      <img src="https://ssl.gstatic.com/images/branding/product/1x/gsa_64dp.png" alt="Google logo" />
+      Reviews
+    </h2>
+    <p class="sub">We’d love to hear your feedback!</p>
+    <a class="button" href="https://g.page/r/CSmhO2K32fIWEBM/review" target="_blank" rel="noopener">
+      Leave a Review on Google
+    </a>
   </section>
-  -->
 
-  <!-- ========================
-       LOCATION / MAP
-       If Google flips to satellite, ensure the URL has !5e0 (not !5e1).
-       To change map size: edit .map-container width/height in CSS.
-  ========================= -->
+  <!-- SOCIAL STRIP (ABOVE LOCATION) -->
+  <div class="social-icons" aria-label="Social media links">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/villacaetanogoa" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917020430564?text=Hello%20Villa%20Caetano%20%E2%80%94%20I%27d%20like%20to%20enquire%20about%20availability." target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <!-- LOCATION -->
   <section id="location">
     <h2>Our Location</h2>
     <div class="map-container">
@@ -122,55 +132,19 @@
     </div>
   </section>
 
-  <!-- ========================
-       REVIEWS (BUTTON ONLY)
-       Update the link if Google changes your review URL.
-  ========================= -->
-  <section id="reviews">
-    <h2>
-      <img src="https://ssl.gstatic.com/images/branding/product/1x/gsa_64dp.png" alt="Google logo" />
-      Reviews
-    </h2>
-    <p class="sub">We’d love to hear your feedback!</p>
-    <a
-      class="button"
-      href="https://g.page/r/CSmhO2K32fIWEBM/review"
-      target="_blank"
-      rel="noopener"
-      aria-label="Leave a review for Villa Caetano on Google"
-    >Leave a Review on Google</a>
-  </section>
-
-  <!-- ========================
-       CONTACT DETAILS
-       Update email/phone as needed.
-  ========================= -->
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact &amp; Booking</h2>
     <p>Email: <a href="mailto:villacaetanogoa@gmail.com">villacaetanogoa@gmail.com</a></p>
     <p>Phone: <a href="tel:+917020430564">+91 7020430564</a></p>
   </section>
 
-  <!-- ========================
-       SOCIAL MEDIA (ABOVE FOOTER)
-       Replace links if your handles change.
-  ========================= -->
-  <div class="social-icons" aria-label="Social media links">
-    <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener" aria-label="Instagram">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-    </a>
-    <a href="https://www.facebook.com/villacaetanogoa" target="_blank" rel="noopener" aria-label="Facebook">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
-    </a>
-  </div>
 
-  <!-- ========================
-       FOOTER
-  ========================= -->
+
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 villacaetanogoa. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
 
