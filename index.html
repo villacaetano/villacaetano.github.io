@@ -1,0 +1,268 @@
+import React from "react";
+
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-800">
+      {/* Header */}
+      <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="h-16 flex items-center justify-between">
+            <a href="#home" className="flex items-center gap-2 font-semibold text-lg">
+              <span className="inline-block w-8 h-8 rounded-full bg-emerald-600" />
+              Villa Caetano
+            </a>
+            <nav className="hidden md:flex items-center gap-6 text-sm">
+              <a className="hover:text-emerald-700" href="#about">About</a>
+              <a className="hover:text-emerald-700" href="#amenities">Amenities</a>
+              <a className="hover:text-emerald-700" href="#rooms">Rooms</a>
+              <a className="hover:text-emerald-700" href="#gallery">Gallery</a>
+              <a className="hover:text-emerald-700" href="#location">Location</a>
+              <a className="hover:text-emerald-700" href="#contact">Contact</a>
+            </nav>
+            <div className="hidden md:block">
+              <a href="#contact" className="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-medium bg-emerald-600 text-white hover:bg-emerald-700 shadow">
+                Book your stay
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section id="home" className="relative">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1974&auto=format&fit=crop"
+            alt="Tropical villa with pool"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-40">
+          <div className="max-w-2xl text-white">
+            <p className="uppercase tracking-widest text-sm/6 text-white/80">Homestay • Private Villa</p>
+            <h1 className="mt-2 text-4xl sm:text-6xl font-semibold">Villa Caetano</h1>
+            <p className="mt-4 text-base sm:text-lg text-white/90">A calm, sun‑lit escape with modern comforts, cozy rooms, and leafy outdoor spaces—perfect for families, friends, and remote work getaways.</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#rooms" className="rounded-2xl px-5 py-3 bg-white text-gray-900 font-medium hover:bg-gray-100 shadow">
+                Explore rooms
+              </a>
+              <a href="#contact" className="rounded-2xl px-5 py-3 bg-emerald-600 text-white font-medium hover:bg-emerald-700 shadow">
+                Request dates
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <img
+              src="https://images.unsplash.com/photo-1520256862855-398228c41684?q=80&w=2071&auto=format&fit=crop"
+              alt="Airy living room"
+              className="w-full h-72 sm:h-96 object-cover rounded-3xl shadow"
+            />
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold">Your home away from home</h2>
+              <p className="mt-4 text-gray-600">Unwind in a thoughtfully designed homestay featuring bright interiors, handcrafted details, and a tranquil garden. Wake to birdsong, sip coffee on the terrace, and make memories in inviting common spaces.</p>
+              <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+                <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-600"/> 3–4 cozy bedrooms</li>
+                <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-600"/> Private bathrooms</li>
+                <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-600"/> Equipped kitchen</li>
+                <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-600"/> High‑speed Wi‑Fi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Amenities */}
+      <section id="amenities" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold">Amenities</h2>
+          <p className="mt-2 text-gray-600">Everything you need for a restful stay.</p>
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Air conditioning", desc: "Stay cool in every room." },
+              { title: "Fast Wi‑Fi", desc: "Work and stream without limits." },
+              { title: "Pool / Plunge tub", desc: "Refresh under the sun." },
+              { title: "Garden & Patio", desc: "Shaded seating and hammock." },
+              { title: "Fully‑equipped kitchen", desc: "Cook, brew, and blend." },
+              { title: "Housekeeping", desc: "Fresh linens on request." },
+            ].map((a, i) => (
+              <div key={i} className="rounded-3xl border border-gray-200 bg-gray-50 p-6 hover:shadow-sm">
+                <div className="text-lg font-medium">{a.title}</div>
+                <p className="mt-2 text-sm text-gray-600">{a.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rooms */}
+      <section id="rooms" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold">Rooms & Rates</h2>
+              <p className="mt-2 text-gray-600">Simple, comfortable rooms designed for good sleep.</p>
+            </div>
+            <a href="#contact" className="rounded-2xl px-5 py-2.5 bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 shadow">Check availability</a>
+          </div>
+
+          <div className="mt-10 grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Courtyard Room",
+                img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070&auto=format&fit=crop",
+                desc: "Queen bed • Garden access",
+              },
+              {
+                name: "Terrace Suite",
+                img: "https://images.unsplash.com/photo-1505691723518-36a4be9c97b8?q=80&w=2070&auto=format&fit=crop",
+                desc: "King bed • Private balcony",
+              },
+              {
+                name: "Family Loft",
+                img: "https://images.unsplash.com/photo-1558185348-16b85f0f9c34?q=80&w=1974&auto=format&fit=crop",
+                desc: "2 Double beds • Lounge",
+              },
+            ].map((room) => (
+              <div key={room.name} className="rounded-3xl overflow-hidden bg-white border border-gray-200 hover:shadow-sm">
+                <img src={room.img} alt={room.name} className="w-full h-56 object-cover" />
+                <div className="p-5">
+                  <div className="font-medium text-lg">{room.name}</div>
+                  <p className="mt-1 text-sm text-gray-600">{room.desc}</p>
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-sm text-gray-700">from <strong>$95</strong> / night</span>
+                    <a href="#contact" className="text-sm font-medium text-emerald-700 hover:underline">Reserve</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section id="gallery" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold">Gallery</h2>
+          <p className="mt-2 text-gray-600">A peek at the spaces and surroundings.</p>
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              "https://images.unsplash.com/photo-1505691723518-36a4be9c97b8?q=80&w=1974&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1974&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1974&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1494059980473-813e73ee784b?q=80&w=1973&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1520256862855-398228c41684?q=80&w=1974&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1974&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1505691723518-36a4be9c97b8?q=80&w=1974&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f8?q=80&w=1974&auto=format&fit=crop",
+            ].map((src, i) => (
+              <img key={i} src={src} className="h-36 sm:h-44 md:h-48 w-full object-cover rounded-2xl" alt="Villa Caetano gallery" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section id="location" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold">Location</h2>
+          <p className="mt-2 text-gray-600">Centrally located—easy access to cafes, beaches, and local sights.</p>
+          <div className="mt-6 grid lg:grid-cols-2 gap-6 items-stretch">
+            <div className="rounded-3xl border border-gray-200 bg-white p-6">
+              <h3 className="font-medium">Getting here</h3>
+              <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                <li>• 45–60 min from the airport</li>
+                <li>• 15–20 min to nearest beach</li>
+                <li>• Walkable to cafes & markets</li>
+              </ul>
+              <div className="mt-6 text-sm text-gray-600">Exact address shared upon booking.</div>
+            </div>
+            <div className="rounded-3xl overflow-hidden border border-gray-200 bg-white">
+              <iframe
+                title="Map"
+                className="w-full h-80 md:h-[28rem]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12577.51717867051!2d73.736!3d15.588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2s!4v1710000000000"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact / Booking */}
+      <section id="contact" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold">Contact & Booking</h2>
+              <p className="mt-2 text-gray-600">Tell us your preferred dates and group size—we'll get right back with availability and rates.</p>
+              <div className="mt-6 space-y-2 text-sm text-gray-700">
+                <div>📞 <a className="hover:underline" href="tel:+0000000000">+00 00000 00000</a></div>
+                <div>✉️ <a className="hover:underline" href="mailto:hello@villacaetano.example">hello@villacaetano.example</a></div>
+                <div>💬 WhatsApp available on request</div>
+              </div>
+            </div>
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-8"
+            >
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="text-sm text-gray-700">Name</label>
+                  <input className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Jane Doe" />
+                </div>
+                <div>
+                  <label className="text-sm text-gray-700">Email</label>
+                  <input type="email" className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="jane@email.com" />
+                </div>
+                <div>
+                  <label className="text-sm text-gray-700">Check‑in</label>
+                  <input type="date" className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                </div>
+                <div>
+                  <label className="text-sm text-gray-700">Check‑out</label>
+                  <input type="date" className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                </div>
+                <div>
+                  <label className="text-sm text-gray-700">Guests</label>
+                  <input type="number" min={1} className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="2" />
+                </div>
+                <div>
+                  <label className="text-sm text-gray-700">Phone (optional)</label>
+                  <input className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="+00 00000 00000" />
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="text-sm text-gray-700">Message</label>
+                  <textarea rows={4} className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Hi! We're looking at 12–15 Oct for 4 adults..." />
+                </div>
+              </div>
+              <div className="mt-6 flex items-center gap-3">
+                <button className="rounded-2xl px-5 py-3 bg-emerald-600 text-white font-medium hover:bg-emerald-700 shadow" type="submit">Send inquiry</button>
+                <a href="mailto:hello@villacaetano.example" className="text-sm font-medium text-emerald-700 hover:underline">or email us directly</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>© {new Date().getFullYear()} Villa Caetano Homestay. All rights reserved.</div>
+          <div className="flex items-center gap-4">
+            <a href="#" className="hover:text-gray-800">Instagram</a>
+            <a href="#" className="hover:text-gray-800">Facebook</a>
+            <a href="#home" className="hover:text-gray-800">Back to top ↑</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
