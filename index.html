@@ -3,18 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Villa Caetano </title>
+  <title>Villa Caetano</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
     header { background: #696969; padding: 20px; text-align: center; }
     header img { height: 60px; }
     section { padding: 40px 20px; text-align: center; }
     footer { background: #808080; padding: 20px; text-align: center; font-size: 14px; }
+
+    /* Social icons */
+    .social-icons {
+      margin-top: 12px;
+    }
+    .social-icons img {
+      width: 32px;   /* smaller size */
+      height: auto;
+      margin: 0 8px;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
   <header>
-    <!-- Replace src with your logo file path -->
     <img src="assets/img/logo/heading-logo.png" alt="Villa Caetano Logo">
   </header>
 
@@ -34,14 +49,13 @@
     <p>Phone: +91 7020430564</p>
   </section>
 
-  
   <footer>
-    <p>© 2025 villacaetanogoa . All rights reserved.</p>
+    <p>© 2025 villacaetanogoa. All rights reserved.</p>
     <div class="social-icons">
-      <a href="https://www.instagram.com/villacaetanogoa" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram">
+      <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
       </a>
-      <a href="https://www.facebook.com/villacaetanogoa" target="_blank">
+      <a href="https://www.facebook.com/villacaetanogoa" target="_blank" rel="noopener">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
       </a>
     </div>
