@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Villa Caetano</title>
 
-   <!-- Favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/logo/favicon-logo.png" />
 
-  
+  <!-- Google Fonts: Exo 2 (body), Poppins (titles), Pacifico (hero) -->
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Pacifico&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --brand-dark: #696969;
@@ -19,8 +21,28 @@
       --google-blue-hover: #3367d6;
     }
 
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #111; }
+    body {
+      font-family: 'Exo 2', Arial, sans-serif;
+      margin: 0; padding: 0; color: #111;
+    }
     section { padding: 40px 20px; text-align: center; }
+
+    /* Fonts */
+    h1.hero-title {
+      font-family: 'Pacifico', cursive;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    p, a, .button {
+      font-family: 'Exo 2', Arial, sans-serif;
+    }
 
     /* Header */
     header { background: var(--brand-dark); padding: 20px; text-align: center; }
@@ -61,7 +83,11 @@
 
     /* Reviews */
     #reviews { background: #f9f9f9; }
-    #reviews h2 { display: inline-flex; align-items: center; gap: 8px; font-size: 1.6rem; margin-bottom: 10px; }
+    #reviews h2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
     #reviews h2 img { width: 28px; height: 28px; }
     #reviews p.sub { margin-top: 0; color: #444; }
     .button {
@@ -71,7 +97,7 @@
       padding: 12px 24px;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
       transition: background 0.2s ease;
     }
     .button:hover { background: var(--google-blue-hover); }
@@ -91,7 +117,7 @@
 
   <!-- HERO -->
   <section id="hero">
-    <h1>Welcome to Villa Caetano Goa</h1>
+    <h1 class="hero-title">Welcome to Villa Caetano Goa</h1>
     <p>Your home away from home. Relax, unwind, and enjoy your stay.</p>
   </section>
 
@@ -109,15 +135,12 @@
 
   <!-- SOCIAL STRIP (ABOVE LOCATION) -->
   <div class="social-icons" aria-label="Social media links">
-    <!-- Instagram -->
     <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
-    <!-- Facebook -->
     <a href="https://www.facebook.com/villacaetanogoa" target="_blank" rel="noopener">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
     </a>
-    <!-- WhatsApp -->
     <a href="https://wa.me/917020430564?text=Hello%20Villa%20Caetano%20%E2%80%94%20I%27d%20like%20to%20enquire%20about%20availability." target="_blank" rel="noopener">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
@@ -139,11 +162,10 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <h2>Contact &amp; Booking</h2>
+    <h2>Contact</h2>
     <p>Email: <a href="mailto:villacaetanogoa@gmail.com">villacaetanogoa@gmail.com</a></p>
     <p>Phone: <a href="tel:+917020430564">+91 7020430564</a></p>
   </section>
-
 
   <!-- FOOTER -->
   <footer>
@@ -151,3 +173,4 @@
   </footer>
 </body>
 </html>
+
