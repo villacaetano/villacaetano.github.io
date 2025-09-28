@@ -13,18 +13,31 @@
 
     /* Social icons */
     .social-icons {
-      margin-top: 12px;
+      text-align: center;
+      padding: 20px 0;
+      background: #f4f4f4; /* light background strip (optional) */
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
     }
     .social-icons img {
-      width: 32px;   /* smaller size */
-      height: auto;
-      margin: 0 8px;
+      width: 28px;
+      height: 28px;
       vertical-align: middle;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
     .social-icons img:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
+    }
+
+    /* Bigger icons on mobile */
+    @media (max-width: 600px) {
+      .social-icons img {
+        width: 34px;
+        height: 34px;
+      }
     }
   </style>
 </head>
@@ -49,16 +62,19 @@
     <p>Phone: +91 7020430564</p>
   </section>
 
+  <!-- Social media ABOVE footer -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/villacaetanogoa" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+    </a>
+  </div>
+
   <footer>
     <p>© 2025 villacaetanogoa. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/villacaetanogoa" target="_blank" rel="noopener">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-      </a>
-    </div>
   </footer>
 </body>
 </html>
+
