@@ -89,6 +89,235 @@
     <h1>Welcome to Villa Caetano Goa</h1>
     <p>Your home away from home. Relax, unwind, and enjoy your stay.</p>
   </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Villa Caetano</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #696969; padding: 20px; text-align: center; }
+    header img { height: 60px; }
+    section { padding: 40px 20px; text-align: center; }
+    footer { background: #808080; padding: 20px; text-align: center; font-size: 14px; }
+
+    /* Social icons (above footer) */
+    .social-icons { text-align: center; padding: 20px 0; background: #f4f4f4; }
+    .social-icons a { display: inline-block; margin: 0 10px; }
+    .social-icons img {
+      width: 28px; height: 28px; vertical-align: middle; cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .social-icons img:hover { transform: scale(1.2); }
+
+    /* Map embed (small 400×250 card) */
+    .map-container {
+      max-width: 400px;
+      height: 250px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Reviews (live) */
+    #reviews { background: #f9f9f9; padding: 40px 20px; text-align: center; }
+    #reviews h2 {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 1.6rem; margin-bottom: 10px;
+    }
+    #reviews h2 img { width: 28px; height: 28px; }
+    #reviews p.sub { margin-top: 0; color: #444; }
+
+    .reviews-list {
+      max-width: 1000px; margin: 24px auto 0;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px; text-align: left;
+    }
+    .review-card {
+      background: #fff; border-radius: 12px; padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; background: #eee; flex: 0 0 36px;
+    }
+    .author { font-weight: 600; line-height: 1.2; }
+    .meta { font-size: 12px; color: #666; }
+    .stars { font-size: 14px; letter-spacing: 1px; }
+    .review-text { margin-top: 8px; font-size: 14px; line-height: 1.5; color: #333; }
+    .more-link { display: inline-block; margin-top: 10px; font-size: 13px; color: #4285F4; text-decoration: none; }
+    .more-link:hover { text-decoration: underline; }
+
+    .review-cta { margin-top: 18px; }
+    .button {
+      display: inline-block; background: #4285F4; color: #fff;
+      padding: 12px 24px; border-radius: 6px; text-decoration: none;
+      font-weight: 700; transition: background 0.2s ease;
+    }
+    .button:hover { background: #3367d6; }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      .social-icons img { width: 34px; height: 34px; }
+      .map-container { max-width: 90%; height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/img/logo/heading-logo.png" alt="Villa Caetano Logo">
+  </header>
+
+  <section id="hero">
+    <h1>Welcome to Villa Caetano Goa</h1>
+    <p>Your home away from home. Relax, unwind, and enjoy your stay.</p>
+  </section>
+
+  <!-- 
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Villa Caetano Homestay offers cozy rooms, modern amenities, and a peaceful atmosphere for families, friends, and travelers alike.</p>
+  </section>
+
+  -->
+
+  <!-- Location -->
+  <section id="location">
+    <h2>Our Location</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4558.063541774458!2d73.80216589999999!3d15.613931400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfeb88e56b69f7%3A0x16f2d9b7623ba129!2sVilla%20Caetano!5e0!3m2!1sen!2suk!4v1759074730650!5m2!1sen!2suk"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Reviews (live via Google Places API) -->
+  <section id="reviews">
+    <h2>
+      <img src="https://ssl.gstatic.com/images/branding/product/1x/gsa_64dp.png" alt="Google Logo">
+      Reviews
+    </h2>
+    <p class="sub">What guests are saying about Villa Caetano</p>
+
+    <div id="google-reviews" class="reviews-list" aria-live="polite"></div>
+
+    <div class="review-cta">
+      <a class="button" href="https://g.page/r/CSmhO2K32fIWEBM/review" target="_blank" rel="noopener">
+        Leave a Review on Google
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Booking</h2>
+    <p>Email: villacaetanogoa@gmail.com</p>
+    <p>Phone: +91 7020430564</p>
+  </section>
+
+  <!-- Socials ABOVE footer -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/villacaetanogoa" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2025 villacaetanogoa. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== Google Places Reviews (client-side) ===== -->
+  <script>
+    const REVIEWS_LIMIT = 6;
+    const MIN_RATING = 4;
+    const PLACE_ID = 'YOUR_PLACE_ID'; // Replace with your Google Place ID
+
+    const escapeHTML = (str) =>
+      String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+
+    const formatDate = (unixSeconds) => {
+      try {
+        const d = new Date(unixSeconds * 1000);
+        return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+      } catch { return ''; }
+    };
+
+    const stars = (n) => '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n));
+
+    function renderReviews(place) {
+      const container = document.getElementById('google-reviews');
+      container.innerHTML = '';
+
+      if (!place || !place.reviews || !place.reviews.length) {
+        container.innerHTML = '<div class="review-card">No reviews available yet.</div>';
+        return;
+      }
+
+      const sorted = place.reviews
+        .filter(r => (r.rating || 0) >= MIN_RATING)
+        .sort((a, b) => (b.time || 0) - (a.time || 0))
+        .slice(0, REVIEWS_LIMIT);
+
+      sorted.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'review-card';
+
+        const profilePhoto = r.profile_photo_url || '';
+        const authorName = escapeHTML(r.author_name || 'Guest');
+        const rating = r.rating || 0;
+        const relativeTime = r.relative_time_description || formatDate(r.time || 0);
+        const text = escapeHTML(r.text || '');
+
+        card.innerHTML = `
+          <div class="review-header">
+            <img class="avatar" src="${profilePhoto}" alt="${authorName}'s avatar" onerror="this.style.display='none'">
+            <div>
+              <div class="author">${authorName}</div>
+              <div class="meta"><span class="stars">${stars(rating)}</span> · ${relativeTime}</div>
+            </div>
+          </div>
+          <div class="review-text">${text}</div>
+          ${r.author_url ? `<a class="more-link" href="${r.author_url}" target="_blank" rel="noopener">View on Google</a>` : ''}
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function initReviews() {
+      if (!PLACE_ID || PLACE_ID === 'YOUR_PLACE_ID') {
+        console.warn('Set YOUR_PLACE_ID before loading reviews.');
+        return;
+      }
+      const service = new google.maps.places.PlacesService(document.createElement('div'));
+      service.getDetails(
+        { placeId: PLACE_ID, fields: ['name','url','reviews','rating'] },
+        (place, status) => {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            renderReviews(place);
+          } else {
+            document.getElementById('google-reviews').innerHTML =
+              '<div class="review-card">Could not load Google reviews right now.</div>';
+          }
+        }
+      );
+    }
+    window.initReviews = initReviews;
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initReviews"></script>
+</body>
+</html>
 
   <section id="about">
     <h2>About Us</h2>
