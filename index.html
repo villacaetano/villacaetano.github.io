@@ -15,7 +15,7 @@
     .social-icons {
       text-align: center;
       padding: 20px 0;
-      background: #f4f4f4; /* light background strip (optional) */
+      background: #f4f4f4; /* optional */
     }
     .social-icons a {
       display: inline-block;
@@ -32,12 +32,56 @@
       transform: scale(1.2);
     }
 
-    /* Bigger icons on mobile */
-    @media (max-width: 600px) {
-      .social-icons img {
-        width: 34px;
-        height: 34px;
-      }
+    /* Map embed */
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Review section */
+    #reviews {
+      background: #f9f9f9;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #reviews h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 1.6rem;
+    }
+    #reviews h2 img {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+    }
+    #reviews a.button {
+      display: inline-block;
+      background: #4285F4; /* Google blue */
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s ease;
+      margin-top: 16px;
+    }
+    #reviews a.button:hover {
+      background: #3367d6;
     }
   </style>
 </head>
@@ -56,13 +100,37 @@
     <p>Villa Caetano Homestay offers cozy rooms, modern amenities, and a peaceful atmosphere for families, friends, and travelers alike.</p>
   </section>
 
+  <!-- Location -->
+  <section id="location">
+    <h2>Our Location</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4558.063541774458!2d73.80216589999999!3d15.613931400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfeb88e56b69f7%3A0x16f2d9b7623ba129!2sVilla%20Caetano!5e1!3m2!1sen!2suk!4v1759074730650!5m2!1sen!2suk"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <h2>
+      <img src="https://ssl.gstatic.com/images/branding/product/1x/gsa_64dp.png" alt="Google Logo">
+      Reviews
+    </h2>
+    <p>We’d love to hear your feedback!</p>
+    <a class="button" href="https://g.page/r/CSmhO2K32fIWEBM/review" target="_blank" rel="noopener">
+      Leave a Review on Google
+    </a>
+  </section>
+
   <section id="contact">
     <h2>Contact & Booking</h2>
     <p>Email: villacaetanogoa@gmail.com</p>
     <p>Phone: +91 7020430564</p>
   </section>
 
-  <!-- Social media ABOVE footer -->
   <div class="social-icons">
     <a href="https://www.instagram.com/villacaetanogoa" target="_blank" rel="noopener">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
