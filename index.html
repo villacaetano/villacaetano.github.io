@@ -27,13 +27,35 @@
     }
     section { padding: 40px 20px; text-align: center; }
 
-    /* Fonts */
-    h1.hero-title {
-      font-family: 'Pacifico', cursive;
-      font-weight: 400;
-      font-size: 2rem;
-      margin-bottom: 10px;
+    /* Hero Title */
+    .hero-title {
+      margin: 0;
+      line-height: 1.2;
     }
+    .hero-title .welcome-text {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      display: block;
+      color: #444;
+    }
+    .hero-title .villa-text {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.6rem;
+      font-weight: 400;
+      display: block;
+      margin-top: 4px;
+    }
+    @media (max-width: 480px) {
+      .hero-title .welcome-text {
+        font-size: 1rem;
+      }
+      .hero-title .villa-text {
+        font-size: 2rem;
+      }
+    }
+
+    /* Section titles */
     h2 {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
@@ -117,7 +139,10 @@
 
   <!-- HERO -->
   <section id="hero">
-    <h1 class="hero-title">Welcome to Villa Caetano Goa</h1>
+    <h1 class="hero-title">
+      <span class="welcome-text">Welcome to</span>
+      <span class="villa-text">Villa Caetano Goa</span>
+    </h1>
     <p>Your home away from home. Relax, unwind, and enjoy your stay.</p>
   </section>
 
@@ -173,4 +198,5 @@
   </footer>
 </body>
 </html>
+
 
