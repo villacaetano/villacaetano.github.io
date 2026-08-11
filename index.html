@@ -2,61 +2,148 @@
 <html lang="en">
 
 <head>
-<!-- Structured Data for Google (LodgingBusiness) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Villa Caetano",
-  "alternateName": [
-    "Villa Caetano Goa",
-    "Staymaster Villa Caetano",
-    "Caetano Villa"
-  ],
-  "description": "Luxury private 3-bedroom villa in Siolim, North Goa with a spacious private pool, pool house, and lush tropical garden. Managed by Staymaster. Just minutes from Anjuna and Vagator beaches, offering a serene resort-like atmosphere with easy access to the coastline and Mopa Airport."
-  "url": "https://villacaetano.com/",
-  "image": [
-    "https://villacaetano.com/assets/img/hero-bg.jpg",
-    "https://villacaetano.com/assets/img/about.jpg"
-  ],
-  "telephone": "+91-7020430564",
-  "email": "villacaetanogoa@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Siolim, Marna",
-    "addressLocality": "North Goa",
-    "addressRegion": "Goa",
-    "postalCode": "403507",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 15.65,
-    "longitude": 73.85
-  },
-  "priceRange": "$$",
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "Private Pool", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "3 Bedrooms", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Tropical Garden", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Pool House", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Rooftop Terrace", "value": true }
-  ],
-  "provider": {
-    "@type": "Organization",
-    "name": "Staymaster",
-    "url": "https://staymaster.in/"
-  },
-  "sameAs": [
-    "https://www.instagram.com/villacaetanogoa/",
-    "https://www.facebook.com/villacaetanogoa/",
-    "https://www.threads.net/@villacaetanogoa",
-    "https://www.airbnb.co.in/rooms/1704891866347043281",
-    "https://staymaster.in/property-details/caetano"
-  ]
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Villa Caetano | Luxury Private Villa with Pool in North Goa</title>
+  <meta name="description" content="Luxury private 3-bedroom villa in Siolim, North Goa with private pool, pool house & tropical garden. Managed by Staymaster. Minutes from Anjuna & Vagator beaches.">
+  <meta name="keywords" content="villa caetano, north goa villa, private pool goa, luxury villa siolim, anjuna beach villa, vagator villa, staymaster villa caetano, caetano villa">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://villacaetano.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://villacaetano.com/assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://villacaetano.com/assets/img/apple-touch-icon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://villacaetano.com/">
+  <meta property="og:title" content="Villa Caetano | Luxury Private Villa with Pool in North Goa">
+  <meta property="og:description" content="Luxury private 3-bedroom villa in Siolim, North Goa with private pool, pool house & tropical garden. Managed by Staymaster. Minutes from Anjuna & Vagator beaches.">
+  <meta property="og:image" content="https://villacaetano.com/assets/img/hero-bg.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Villa Caetano">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Villa Caetano | Luxury Private Villa with Pool in North Goa">
+  <meta name="twitter:description" content="Luxury private 3-bedroom villa in Siolim, North Goa with private pool, pool house & tropical garden. Managed by Staymaster. Minutes from Anjuna & Vagator beaches.">
+  <meta name="twitter:image" content="https://villacaetano.com/assets/img/hero-bg.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Young+Serif&family=Homemade+Apple&family=DM+Serif+Display:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Header Styles -->
+  <style>
+    #header .navmenu ul li a {
+      font-size: 1.00rem !important;
+      letter-spacing: 0.4px;
+      padding: 10px 16px !important;
+    }
+    #header .container-fluid {
+      padding-left: 1.8rem !important;
+      padding-right: 1.8rem !important;
+    }
+    @media (min-width: 1200px) {
+      #header .container-fluid {
+        padding-left: 2.8rem !important;
+        padding-right: 2.8rem !important;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Villa Caetano",
+    "alternateName": [
+      "Villa Caetano Goa",
+      "Staymaster Villa Caetano",
+      "Caetano Villa"
+    ],
+    "description": "Luxury private 3-bedroom villa in Siolim, North Goa with a spacious private pool, pool house, and lush tropical garden. Managed by Staymaster. Just minutes from Anjuna and Vagator beaches, offering a serene resort-like atmosphere with easy access to the coastline and Mopa Airport.",
+    "url": "https://villacaetano.com/",
+    "image": [
+      "https://villacaetano.com/assets/img/hero-bg.jpg",
+      "https://villacaetano.com/assets/img/about.jpg"
+    ],
+    "telephone": "+91-7020430564",
+    "email": "villacaetano@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Siolim, Marna",
+      "addressLocality": "North Goa",
+      "addressRegion": "Goa",
+      "postalCode": "403507",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 15.65,
+      "longitude": 73.85
+    },
+    "priceRange": "$$",
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Private Pool",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "3 Bedrooms",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Tropical Garden",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Pool House",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free Parking",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Rooftop Terrace",
+        "value": true
+      }
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "Staymaster",
+      "url": "https://staymaster.in/"
+    },
+    "sameAs": [
+      "https://www.instagram.com/villacaetanogoa/",
+      "https://www.facebook.com/villacaetanogoa/",
+      "https://www.threads.net/@villacaetanogoa",
+      "https://www.airbnb.co.in/rooms/1704891866347043281",
+      "https://staymaster.in/property-details/caetano"
+    ]
+  }
+  </script>
+</head>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
