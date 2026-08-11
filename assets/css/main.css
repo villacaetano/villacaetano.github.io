@@ -833,3 +833,11 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.25);
 }
+/* ===== Make AOS animations faster ===== */
+[data-aos] {
+  transition-duration: 0.45s !important;   /* default is ~0.8–1s → now much snappier */
+}
+
+[data-aos-delay] {
+  transition-delay: 0.4s !important;         /* removes the staggered delay */
+}
