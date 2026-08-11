@@ -4,7 +4,7 @@
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
-* Cleaned for Villa Caetano (removed unused sections)
+* Cleaned for Villa Caetano (removed unused sections + scroll-top button)
 */
 
 /*--------------------------------------------------------------
@@ -514,7 +514,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 5px;
 }
 
-
 /*--------------------------------------------------------------
 # Disable AOS animation delay on mobile
 --------------------------------------------------------------*/
@@ -634,7 +633,6 @@ section,
   .hero h2 {
     font-size: 32px;
   }
-
   .hero p {
     font-size: 18px;
   }
@@ -662,7 +660,7 @@ section,
 .about .content ul i {
   flex-shrink: 0;
   font-size: 48px;
-  color: #2dc997; /* fixed invalid hex */
+  color: #2dc997;
   margin-right: 20px;
   line-height: 0;
 }
@@ -861,6 +859,7 @@ section,
   visibility: visible;
   right: 80px;
 }
+
 /* Share Button */
 .btn-share {
   background-color: #2dc997;
@@ -921,7 +920,7 @@ section,
 
 .portfolio .portfolio-content img {
   width: 100%;
-  height: auto;           /* keep original proportions */
+  height: auto;
   display: block;
 }
 
@@ -929,39 +928,40 @@ section,
   flex-grow: 1;
 }
 
-
-
 /* ===== Gallery Improvements ===== */
-
-/* 1. Less gap between photos */
 .portfolio .row.gy-4 {
-  --bs-gutter-y: 1.2rem;   /* was bigger */
+  --bs-gutter-y: 1.2rem;
 }
 
 .portfolio .isotope-container {
-  margin: 0 -8px;          /* reduces horizontal gap */
+  margin: 0 -8px;
 }
 
 .portfolio .portfolio-item {
-  padding: 0 8px 16px 8px; /* tighter spacing */
+  padding: 0 8px 16px 8px;
 }
 
-/* 2. Lighter / thinner borders */
 .portfolio .portfolio-content {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);  /* softer shadow */
-  border: 1px solid rgba(0, 0, 0, 0.06);        /* very light border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .portfolio .portfolio-info {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);    /* lighter top line */
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   padding: 18px 16px;
 }
 
-/* 3. Stronger zoom on hover */
 .portfolio .portfolio-content img {
   transition: transform 0.45s ease;
 }
 
 .portfolio .portfolio-content:hover img {
-  transform: scale(1.25);   /* was around 1.1 – now zooms more */
+  transform: scale(1.25);
+}
+
+/*--------------------------------------------------------------
+# Completely hide the scroll-top button
+--------------------------------------------------------------*/
+#scroll-top {
+  display: none !important;
 }
