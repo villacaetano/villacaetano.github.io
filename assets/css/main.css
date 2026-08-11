@@ -547,12 +547,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-/* Move scroll-top higher to clear the WhatsApp button */
-#scroll-top {
-  bottom: 110px;
-  right: 4px;
-}
-
 /*--------------------------------------------------------------
 # Disable AOS animation delay on mobile
 --------------------------------------------------------------*/
