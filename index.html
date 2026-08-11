@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
-	<!-- Structured Data for Google (LodgingBusiness / Vacation Rental) -->
+<!-- Structured Data for Google (LodgingBusiness) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "name": "Villa Caetano",
-  "alternateName": "Villa Caetano Goa",
-  "description": "Luxury private 3-bedroom villa with private pool and lush tropical garden in Siolim, North Goa. Minutes from Anjuna and Vagator beaches. Perfect for families and groups seeking privacy and a resort-like atmosphere.",
+  "alternateName": [
+    "Villa Caetano Goa",
+    "Staymaster Villa Caetano",
+    "Caetano Villa"
+  ],
+  "description": "Luxury private 3-bedroom villa with private pool and lush tropical garden in Siolim, North Goa. Managed by Staymaster. Minutes from Anjuna and Vagator beaches.",
   "url": "https://villacaetano.com/",
   "image": [
     "https://villacaetano.com/assets/img/hero-bg.jpg",
@@ -32,37 +36,18 @@
   },
   "priceRange": "$$",
   "amenityFeature": [
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Private Pool",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "3 Bedrooms",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Tropical Garden",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Pool House",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Free Parking",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Rooftop Terrace",
-      "value": true
-    }
+    { "@type": "LocationFeatureSpecification", "name": "Private Pool", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "3 Bedrooms", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Tropical Garden", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pool House", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Rooftop Terrace", "value": true }
   ],
+  "provider": {
+    "@type": "Organization",
+    "name": "Staymaster",
+    "url": "https://staymaster.in/"
+  },
   "sameAs": [
     "https://www.instagram.com/villacaetanogoa/",
     "https://www.facebook.com/villacaetanogoa/",
