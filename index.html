@@ -192,13 +192,16 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
  
-          <a href="https://www.airbnb.co.in/rooms/1704891866347043281" 
-           target="_blank" 
-           rel="noopener"
-           class="btn-book"
-           onclick="gtag('event', 'book_now_click');">
-          Book Now
-          </a>
+         <a href="https://www.airbnb.co.in/rooms/1704891866347043281" 
+          target="_blank" 
+          rel="noopener"
+          class="btn-book"
+          onclick="gtag('event', 'book_now_click', {
+         'event_category': 'Button',
+         'event_label': 'Book Now Button'
+          });">
+           Book Now
+           </a>
     
       </div>
 
@@ -661,7 +664,10 @@
    target="_blank" 
    rel="noopener noreferrer"
    data-tooltip="Chat with us to book Villa Caetano"
-   onclick="gtag('event', 'whatsapp_click');">
+   onclick="gtag('event', 'whatsapp_click', {
+     'event_category': 'Button',
+     'event_label': 'WhatsApp Float'
+   });">
   <i class="bi bi-whatsapp"></i>
 </a>
 
