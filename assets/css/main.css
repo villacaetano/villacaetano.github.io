@@ -1038,3 +1038,149 @@ section,
     font-size: 28px;
   }
 }
+/* ===== Google Rating Box ===== */
+.google-rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 40px;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.rating-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.google-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-logo .my-reviews {
+  font-size: 0.95rem;
+  color: #5f6368;
+  font-weight: 500;
+}
+
+.rating-score {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-score .score {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #202124;
+  line-height: 1;
+}
+
+.rating-score .stars {
+  color: #fbbc04;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+.rating-score .review-count {
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.leave-review-btn {
+  background: #1a73e8;
+  color: #fff !important;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.leave-review-btn:hover {
+  background: #1557b0;
+  color: #fff !important;
+}
+
+/* ===== Review Cards ===== */
+.review-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.review-card .stars {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.review-card .review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  background: #2dc997;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.reviewer strong {
+  display: block;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.reviewer span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .google-rating-box {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .rating-left {
+    align-items: center;
+  }
+}
