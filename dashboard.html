@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Villa Caetano</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      padding: 50px 40px;
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .logo {
+      max-height: 55px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #777;
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+    }
+
+    .counter-box {
+      background: #f0fdf7;
+      border: 2px solid #2dc997;
+      border-radius: 16px;
+      padding: 30px 20px;
+      margin-bottom: 30px;
+    }
+
+    .counter-label {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .counter-number {
+      font-size: 3.8rem;
+      font-weight: 700;
+      color: #2dc997;
+      line-height: 1;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #999;
+      margin-top: 25px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #2dc997;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="assets/img/logo.png" alt="Villa Caetano" class="logo">
+    
+    <h1>Booking Dashboard</h1>
+    <p class="subtitle">Live click counter for the Book Now button</p>
+
+    <div class="counter-box">
+      <div class="counter-label">Total Book Now Clicks</div>
+      <div class="counter-number" id="counter">...</div>
+    </div>
+
+    <p class="note">This number updates every time someone clicks the Book Now button on the website.</p>
+
+    <a href="/" class="back-link">← Back to Website</a>
+  </div>
+
+  <script>
+    // Fetch the current count
+    fetch('https://api.countapi.xyz/get/villacaetano/booknow')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('counter').textContent = data.value || 0;
+      })
+      .catch(() => {
+        document.getElementById('counter').textContent = "0";
+      });
+  </script>
+
+</body>
+</html>
