@@ -20,29 +20,27 @@
       font-family: 'Poppins', sans-serif;
       background: #f4f6f8;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      padding: 40px 20px;
+      color: #333;
     }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-      padding: 50px 40px;
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .header {
       text-align: center;
-      max-width: 420px;
-      width: 100%;
+      margin-bottom: 40px;
     }
 
     .logo {
       max-height: 55px;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 600;
       color: #222;
       margin-bottom: 8px;
@@ -50,79 +48,159 @@
 
     .subtitle {
       color: #777;
-      font-size: 0.95rem;
-      margin-bottom: 40px;
+      font-size: 1rem;
     }
 
-    .counter-box {
-      background: #f0fdf7;
-      border: 2px solid #2dc997;
+    .card {
+      background: white;
       border-radius: 16px;
-      padding: 30px 20px;
-      margin-bottom: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      padding: 30px;
+      margin-bottom: 25px;
     }
 
-    .counter-label {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 10px;
+    .card h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .counter-number {
-      font-size: 3.8rem;
-      font-weight: 700;
-      color: #2dc997;
-      line-height: 1;
+    .card h2 span {
+      font-size: 1.4rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8faf9;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .link-btn:hover {
+      background: #2dc997;
+      color: white;
+      border-color: #2dc997;
+      transform: translateY(-2px);
+    }
+
+    .link-btn .arrow {
+      font-size: 1.1rem;
+      opacity: 0.6;
     }
 
     .note {
-      font-size: 0.85rem;
-      color: #999;
-      margin-top: 25px;
+      background: #fff8e6;
+      border-left: 4px solid #f59e0b;
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #92400e;
+      margin-top: 10px;
     }
 
-    .back-link {
-      display: inline-block;
-      margin-top: 30px;
+    .back {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back a {
       color: #2dc997;
       text-decoration: none;
       font-weight: 500;
     }
 
-    .back-link:hover {
+    .back a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <img src="assets/img/logo.png" alt="Villa Caetano" class="logo">
-    
-    <h1>Booking Dashboard</h1>
-    <p class="subtitle">Live click counter for the Book Now button</p>
+  <div class="container">
 
-    <div class="counter-box">
-      <div class="counter-label">Total Book Now Clicks</div>
-      <div class="counter-number" id="counter">...</div>
+    <div class="header">
+      <img src="assets/img/logo.png" alt="Villa Caetano" class="logo">
+      <h1>Villa Caetano Dashboard</h1>
+      <p class="subtitle">Quick access to your most important statistics</p>
     </div>
 
-    <p class="note">This number updates every time someone clicks the Book Now button on the website.</p>
+    <!-- Book Now & WhatsApp -->
+    <div class="card">
+      <h2><span>📊</span> Button Clicks</h2>
+      <div class="links">
+        <a href="https://analytics.google.com/analytics/web/#/pXXXXXXX/reports/explorer?params=_u..nav%3Dmaui&collectionId=life-cycle&r=events-overview" 
+           target="_blank" class="link-btn">
+          <span>View All Events (Book Now + WhatsApp)</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+      <div class="note">
+        After opening Google Analytics, go to <strong>Reports → Engagement → Events</strong>.  
+        Look for <code>book_now_click</code> and <code>whatsapp_click</code>.
+      </div>
+    </div>
 
-    <a href="/" class="back-link">← Back to Website</a>
+    <!-- Country -->
+    <div class="card">
+      <h2><span>🌍</span> Visitors by Country</h2>
+      <div class="links">
+        <a href="https://analytics.google.com/analytics/web/" target="_blank" class="link-btn">
+          <span>Open User Location Report</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+      <div class="note">
+        In Google Analytics go to: <strong>Reports → User → User attributes → Country</strong>
+      </div>
+    </div>
+
+    <!-- Device -->
+    <div class="card">
+      <h2><span>📱</span> Device Breakdown</h2>
+      <div class="links">
+        <a href="https://analytics.google.com/analytics/web/" target="_blank" class="link-btn">
+          <span>Open Device Category Report</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+      <div class="note">
+        In Google Analytics go to: <strong>Reports → Tech → Tech details</strong>  
+        Then select <strong>Device category</strong>
+      </div>
+    </div>
+
+    <!-- Quick Tips -->
+    <div class="card">
+      <h2><span>💡</span> Quick Tips</h2>
+      <ul style="padding-left: 20px; line-height: 1.8; color: #555;">
+        <li>Data can take a few hours to appear in Google Analytics</li>
+        <li>Use the date range selector (top right) to see Today / Last 7 days / Last 30 days</li>
+        <li>Click on any event name to see more details (country, device, etc.)</li>
+      </ul>
+    </div>
+
+    <div class="back">
+      <a href="/">← Back to Villa Caetano Website</a>
+    </div>
+
   </div>
-
-  <script>
-    // Fetch the current count
-    fetch('https://api.countapi.xyz/get/villacaetano/booknow')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('counter').textContent = data.value || 0;
-      })
-      .catch(() => {
-        document.getElementById('counter').textContent = "0";
-      });
-  </script>
 
 </body>
 </html>
