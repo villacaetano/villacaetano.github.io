@@ -835,9 +835,9 @@ section,
 }
 /* ===== Make AOS animations faster ===== */
 [data-aos] {
-  transition-duration: 0.45s !important;   /* default is ~0.8–1s → now much snappier */
+  transition-duration: 0.3s !important;   /* default is ~0.8–1s → now much snappier */
 }
 
 [data-aos-delay] {
-  transition-delay: 0.4s !important;         /* removes the staggered delay */
+  transition-delay: 0.3s !important;         /* removes the staggered delay */
 }
