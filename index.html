@@ -191,13 +191,15 @@
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
-        <a href="https://www.airbnb.co.in/rooms/1704891866347043281" 
+ 
+          <a href="https://www.airbnb.co.in/rooms/1704891866347043281" 
            target="_blank" 
            rel="noopener"
-           class="btn-book">
+           class="btn-book"
+           onclick="gtag('event', 'book_now_click');">
           Book Now
-        </a>
+          </a>
+    
       </div>
 
     </div>
@@ -654,11 +656,14 @@
   </a>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/917020430564?text=Hi%2C%20I%20am%20contacting%20to%20book%20Villa%20Caetano."
-     class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-     data-tooltip="Chat with us to book Villa Caetano">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+ <a href="https://wa.me/917020430564?text=Hi%2C%20I%20am%20contacting%20to%20book%20Villa%20Caetano."
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   data-tooltip="Chat with us to book Villa Caetano"
+   onclick="gtag('event', 'whatsapp_click');">
+  <i class="bi bi-whatsapp"></i>
+</a>
 
   <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
