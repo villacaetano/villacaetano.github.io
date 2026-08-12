@@ -1184,3 +1184,42 @@ section,
     align-items: center;
   }
 }
+
+
+/* ===== Reviews Slider ===== */
+.reviews-slider {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scroll-reviews 25s linear infinite;
+}
+
+.reviews-track:hover {
+  animation-play-state: paused;
+}
+
+.review-card {
+  width: 340px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+@keyframes scroll-reviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
