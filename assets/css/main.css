@@ -4,8 +4,9 @@
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
-* Cleaned for Villa Caetano (removed unused sections)
+* Cleaned for Villa Caetano
 */
+
 /*--------------------------------------------------------------
 # Font & Color Variables
 --------------------------------------------------------------*/
@@ -14,6 +15,7 @@
   --heading-font: "Roboto", sans-serif;
   --nav-font: "Poppins", sans-serif;
 }
+
 :root {
   --background-color: #ffffff;
   --default-color: #666666;
@@ -22,6 +24,7 @@
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
+
 :root {
   --nav-color: #ffffff;
   --nav-hover-color: #ffffff;
@@ -30,10 +33,12 @@
   --nav-dropdown-color: #666666;
   --nav-dropdown-hover-color: #2dc997;
 }
+
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
 }
+
 .dark-background {
   --background-color: #2f3942;
   --default-color: #ffffff;
@@ -41,9 +46,11 @@
   --surface-color: #445360;
   --contrast-color: #ffffff;
 }
+
 :root {
   scroll-behavior: smooth;
 }
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -52,19 +59,23 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
+
 a {
   color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
 }
+
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+
 /* Pulsating Play Button */
 .pulsating-play-btn {
   width: 94px;
@@ -75,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
 }
+
 .pulsating-play-btn:before {
   content: "";
   position: absolute;
@@ -92,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   left: -15%;
   background: rgba(198, 16, 0, 0);
 }
+
 .pulsating-play-btn:after {
   content: "";
   position: absolute;
@@ -106,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
 .pulsating-play-btn:hover:before {
   content: "";
   position: absolute;
@@ -122,10 +136,12 @@ h1, h2, h3, h4, h5, h6 {
   animation: none;
   border-radius: 0;
 }
+
 .pulsating-play-btn:hover:after {
   border-left: 15px solid var(--accent-color);
   transform: scale(20);
 }
+
 @keyframes pulsate-play-btn {
   0% {
     transform: scale(0.6, 0.6);
@@ -136,6 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
   }
 }
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -149,13 +166,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
 }
+
 .header .logo {
   line-height: 1;
 }
+
 .header .logo img {
   max-height: 70px;
   margin-right: auto;
 }
+
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
@@ -163,18 +183,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
   text-transform: uppercase;
 }
+
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
   --background-color: #474d52;
 }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
   }
+
   .navmenu ul {
     margin: 0;
     padding: 0;
@@ -182,16 +204,20 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
     align-items: center;
   }
+
   .navmenu li {
     position: relative;
   }
+
   .navmenu > ul > li {
     white-space: nowrap;
     padding: 15px 14px;
   }
+
   .navmenu > ul > li:last-child {
     padding-right: 0;
   }
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
@@ -207,6 +233,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     text-transform: uppercase;
   }
+
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
@@ -214,6 +241,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 5px;
     transition: 0.3s;
   }
+
   .navmenu > ul > li > a:before {
     content: "";
     position: absolute;
@@ -226,17 +254,20 @@ h1, h2, h3, h4, h5, h6 {
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
   }
+
   .navmenu a:hover:before,
   .navmenu li:hover > a:before,
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
   }
+
   .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
   }
+
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
@@ -252,33 +283,40 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 99;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
+
   .navmenu .dropdown ul li {
     min-width: 200px;
   }
+
   .navmenu .dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
     color: var(--nav-dropdown-color);
   }
+
   .navmenu .dropdown ul a i {
     font-size: 12px;
   }
+
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
+
   .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
   }
+
   .navmenu .dropdown .dropdown ul {
     top: 0;
     left: -90%;
     visibility: hidden;
   }
+
   .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
@@ -286,6 +324,7 @@ h1, h2, h3, h4, h5, h6 {
     visibility: visible;
   }
 }
+
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -296,10 +335,12 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     transition: color 0.3s;
   }
+
   .navmenu {
     padding: 0;
     z-index: 9997;
   }
+
   .navmenu ul {
     display: none;
     list-style: none;
@@ -315,6 +356,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
     z-index: 9998;
   }
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
@@ -328,6 +370,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     transition: 0.3s;
   }
+
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
@@ -342,22 +385,26 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
     background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   }
+
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
     background-color: var(--accent-color);
     color: var(--contrast-color);
   }
+
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-dropdown-hover-color);
   }
+
   .navmenu .active i,
   .navmenu .active:focus i {
     background-color: var(--accent-color);
     color: var(--contrast-color);
     transform: rotate(180deg);
   }
+
   .navmenu .dropdown ul {
     position: static;
     display: none;
@@ -367,16 +414,20 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--nav-dropdown-background-color);
     transition: all 0.5s ease-in-out;
   }
+
   .navmenu .dropdown ul ul {
     background-color: rgba(33, 37, 41, 0.1);
   }
+
   .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
+
   .mobile-nav-active {
     overflow: hidden;
   }
+
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
@@ -386,6 +437,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0;
     z-index: 9999;
   }
+
   .mobile-nav-active .navmenu {
     position: fixed;
     overflow: hidden;
@@ -393,10 +445,12 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
   }
+
   .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -408,6 +462,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px 0;
   position: relative;
 }
+
 .footer h3 {
   font-size: 36px;
   font-weight: 700;
@@ -415,15 +470,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0 0 15px 0;
 }
+
 .footer p {
   font-size: 15px;
   font-style: italic;
   padding: 0;
   margin: 0 0 30px 0;
 }
+
 .footer .social-links {
   margin: 0 0 30px 0;
 }
+
 .footer .social-links a {
   font-size: 16px;
   display: flex;
@@ -439,18 +497,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 36px;
   transition: 0.3s;
 }
+
 .footer .social-links a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   text-decoration: none;
 }
+
 .footer .copyright {
   padding-top: 25px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
+
 .footer .credits {
   font-size: 13px;
   padding-top: 5px;
 }
+
 /*--------------------------------------------------------------
 # Disable AOS animation delay on mobile
 --------------------------------------------------------------*/
@@ -459,6 +521,7 @@ h1, h2, h3, h4, h5, h6 {
     transition-delay: 0 !important;
   }
 }
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -470,12 +533,14 @@ section,
   scroll-margin-top: 81px;
   overflow: clip;
 }
+
 @media (max-width: 1199px) {
   section,
   .section {
     scroll-margin-top: 66px;
   }
 }
+
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
@@ -484,15 +549,18 @@ section,
   padding-bottom: 60px;
   position: relative;
 }
+
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
+
 .section-title p {
   margin-bottom: 0;
 }
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -505,6 +573,7 @@ section,
   align-items: center;
   justify-content: center;
 }
+
 .hero img {
   position: absolute;
   inset: 0;
@@ -514,6 +583,7 @@ section,
   object-fit: cover;
   z-index: 1;
 }
+
 .hero:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 65%);
@@ -521,20 +591,24 @@ section,
   inset: 0;
   z-index: 2;
 }
+
 .hero .container {
   position: relative;
   z-index: 3;
 }
+
 .hero h2 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
 }
+
 .hero p {
   margin: 10px 0 0 0;
   font-size: 24px;
   color: var(--heading-color);
 }
+
 .hero .btn-get-started {
   color: var(--default-color);
   font-weight: 400;
@@ -547,11 +621,13 @@ section,
   transition: 0.5s;
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 50%);
 }
+
 .hero .btn-get-started:hover {
   color: var(--contrast-color);
   background: var(--accent-color);
   border-color: var(--accent-color);
 }
+
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
@@ -560,6 +636,7 @@ section,
     font-size: 18px;
   }
 }
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -567,15 +644,18 @@ section,
   font-size: 2rem;
   font-weight: 700;
 }
+
 .about .content ul {
   list-style: none;
   padding: 0;
 }
+
 .about .content ul li {
   display: flex;
   align-items: flex-start;
   margin-top: 40px;
 }
+
 .about .content ul i {
   flex-shrink: 0;
   font-size: 48px;
@@ -583,21 +663,26 @@ section,
   margin-right: 20px;
   line-height: 0;
 }
+
 .about .content ul h5 {
   font-size: 18px;
   font-weight: 700;
 }
+
 .about .content ul p {
   font-size: 15px;
 }
+
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
 .about .pulsating-play-btn {
   position: absolute;
   left: calc(50% - 47px);
   top: calc(50% - 47px);
 }
+
 /*--------------------------------------------------------------
 # Portfolio / Gallery Section
 --------------------------------------------------------------*/
@@ -607,6 +692,7 @@ section,
   list-style: none;
   text-align: center;
 }
+
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
@@ -617,33 +703,40 @@ section,
   line-height: 1;
   transition: all 0.3s ease-in-out;
 }
+
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
   color: var(--accent-color);
 }
+
 .portfolio .portfolio-filters li:first-child {
   margin-left: 0;
 }
+
 .portfolio .portfolio-filters li:last-child {
   margin-right: 0;
 }
+
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
     margin: 0 5px;
   }
 }
+
 .portfolio .portfolio-content {
   background-color: var(--surface-color);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   height: 100%;
   overflow: hidden;
 }
+
 .portfolio .portfolio-content img {
   transition: 0.3s;
   position: relative;
   z-index: 1;
 }
+
 .portfolio .portfolio-content .portfolio-info {
   background-color: var(--background-color);
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -651,33 +744,40 @@ section,
   position: relative;
   z-index: 2;
 }
+
 .portfolio .portfolio-content .portfolio-info h4 {
   font-size: 18px;
   font-weight: 600;
   padding-right: 50px;
 }
+
 .portfolio .portfolio-content .portfolio-info h4 a {
   color: var(--heading-color);
   transition: 0.3s;
 }
+
 .portfolio .portfolio-content .portfolio-info h4 a:hover {
   color: var(--accent-color);
 }
+
 .portfolio .portfolio-content .portfolio-info p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
 }
+
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item + .info-item {
   margin-top: 40px;
 }
+
 .contact .info-item i {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -691,20 +791,192 @@ section,
   transition: all 0.3s ease-in-out;
   margin-right: 15px;
 }
+
 .contact .info-item h3 {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
 }
+
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
 }
+
 /*--------------------------------------------------------------
-# Floating WhatsApp Button
+# Share Button
 --------------------------------------------------------------*/
+.btn-share {
+  background-color: #2dc997;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-share:hover,
+.btn-share:focus,
+.btn-share:active {
+  background-color: #25b585 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(45, 201, 151, 0.3);
+}
+
+.btn-share::after {
+  margin-left: 6px;
+}
+
+/* Dropdown polish */
+#about .dropdown-menu {
+  min-width: 200px;
+  border-radius: 12px;
+  padding: 8px 0;
+  margin-top: 8px !important;
+}
+
+#about .dropdown-item {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+#about .dropdown-item i {
+  font-size: 1.15rem;
+  width: 22px;
+}
+
+#about .dropdown-item:hover {
+  background-color: #f4f4f4;
+}
+
+#about .dropdown-divider {
+  margin: 6px 0;
+}
+
+/* Cleaner gallery alignment */
+.portfolio .portfolio-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.portfolio .portfolio-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio .portfolio-info {
+  flex-grow: 1;
+}
+
+/* ===== Gallery Improvements ===== */
+.portfolio .row.gy-4 {
+  --bs-gutter-y: 1.2rem;
+}
+
+.portfolio .isotope-container {
+  margin: 0 -8px;
+}
+
+.portfolio .portfolio-item {
+  padding: 0 8px 16px 8px;
+}
+
+.portfolio .portfolio-content {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.portfolio .portfolio-info {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 18px 16px;
+}
+
+.portfolio .portfolio-content img {
+  transition: transform 0.45s ease;
+}
+
+.portfolio .portfolio-content:hover img {
+  transform: scale(1.25);
+}
+
+/* ===== Make AOS animations faster ===== */
+[data-aos] {
+  transition-duration: 0.3s !important;
+}
+
+[data-aos-delay] {
+  transition-delay: 0.3s !important;
+}
+
+/* ===== Book Now Button ===== */
+.btn-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2dc997;
+  color: #fff !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-left: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(45, 201, 151, 0.3);
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  animation: soft-pulse 2.5s infinite;
+}
+
+.btn-book:hover {
+  background: #25b585;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 201, 151, 0.45);
+}
+
+@keyframes soft-pulse {
+  0%   { box-shadow: 0 4px 15px rgba(45, 201, 151, 0.3); }
+  50%  { box-shadow: 0 4px 25px rgba(45, 201, 151, 0.55); }
+  100% { box-shadow: 0 4px 15px rgba(45, 201, 151, 0.3); }
+}
+
+@media (min-width: 1200px) {
+  .navmenu ul {
+    gap: 6px;
+  }
+
+  .navmenu a {
+    padding: 10px 12px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .btn-book {
+    margin-left: 12px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-book {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
+}
+
+/* ===== WhatsApp Button with Hover Tooltip ===== */
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -712,24 +984,26 @@ section,
   bottom: 30px;
   right: 30px;
   background-color: #25D366;
-  color: #fff;
+  color: #fff !important;
   border-radius: 50%;
   text-align: center;
   font-size: 32px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  text-decoration: none;
+  text-decoration: none !important;
 }
+
 .whatsapp-float:hover {
   background-color: #128C7E;
   transform: scale(1.08);
-  color: #fff;
+  color: #fff !important;
 }
-/* Tooltip */
+
+/* Tooltip on hover */
 .whatsapp-float::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -747,97 +1021,20 @@ section,
   transition: all 0.25s ease;
   pointer-events: none;
 }
+
 .whatsapp-float:hover::after {
   opacity: 1;
   visibility: visible;
   right: 80px;
 }
-/* Share Button */
-.btn-share {
-  background-color: #2dc997;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 8px 20px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: all 0.25s ease;
-}
-.btn-share:hover,
-.btn-share:focus,
-.btn-share:active {
-  background-color: #25b585 !important;
-  color: #fff !important;
-  box-shadow: 0 4px 12px rgba(45, 201, 151, 0.3);
-}
-.btn-share::after {
-  margin-left: 6px;
-}
-/* Dropdown polish */
-#about .dropdown-menu {
-  min-width: 200px;
-  border-radius: 12px;
-  padding: 8px 0;
-  margin-top: 8px !important;
-}
-#about .dropdown-item {
-  padding: 10px 18px;
-  font-size: 0.95rem;
-  transition: background 0.2s;
-}
-#about .dropdown-item i {
-  font-size: 1.15rem;
-  width: 22px;
-}
-#about .dropdown-item:hover {
-  background-color: #f4f4f4;
-}
-#about .dropdown-divider {
-  margin: 6px 0;
-}
-/* Cleaner gallery alignment without distorting images */
-.portfolio .portfolio-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.portfolio .portfolio-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.portfolio .portfolio-info {
-  flex-grow: 1;
-}
-/* ===== Gallery Improvements ===== */
-.portfolio .row.gy-4 {
-  --bs-gutter-y: 1.2rem;
-}
-.portfolio .isotope-container {
-  margin: 0 -8px;
-}
-.portfolio .portfolio-item {
-  padding: 0 8px 16px 8px;
-}
-.portfolio .portfolio-content {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-.portfolio .portfolio-info {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 18px 16px;
-}
-.portfolio .portfolio-content img {
-  transition: transform 0.45s ease;
-}
-.portfolio .portfolio-content:hover img {
-  transform: scale(1.25);
-}
-/* ===== Make AOS animations faster ===== */
-[data-aos] {
-  transition-duration: 0.3s !important;   /* default is ~0.8–1s → now much snappier */
-}
 
-[data-aos-delay] {
-  transition-delay: 0.3s !important;         /* removes the staggered delay */
+/* Mobile */
+@media (max-width: 575px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 28px;
+  }
 }
