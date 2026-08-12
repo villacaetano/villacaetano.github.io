@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>WiFi - Villa Caetano</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -21,47 +21,48 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f8f9fa;
+      background: #f4f6f8;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 16px;
       color: #333;
     }
 
     .card {
       background: #ffffff;
       border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-      padding: 40px 30px;
-      max-width: 380px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      padding: 28px 22px 32px;
+      max-width: 360px;
       width: 100%;
       text-align: center;
     }
 
     .logo {
-      max-height: 60px;
-      margin-bottom: 25px;
+      max-height: 58px;
+      margin-bottom: 18px;
+      display: inline-block;
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       color: #222;
     }
 
     .subtitle {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #666;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
     }
 
     .qr-code {
-      width: 220px;
-      height: 220px;
-      margin: 0 auto 25px;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 20px;
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid #eee;
@@ -77,14 +78,14 @@
     .wifi-info {
       background: #f4f6f8;
       border-radius: 12px;
-      padding: 18px 20px;
-      margin-bottom: 25px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
       text-align: left;
     }
 
     .wifi-info p {
-      margin: 8px 0;
-      font-size: 1rem;
+      margin: 6px 0;
+      font-size: 0.95rem;
     }
 
     .wifi-info strong {
@@ -93,47 +94,37 @@
     }
 
     .wifi-logo {
-      max-width: 80px;
+      max-width: 120px;
       margin: 0 auto;
-      opacity: 0.7;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 25px;
-      color: #2dc997;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-<div class="card">
-  <!-- Villa Caetano Logo -->
-  <img src="assets/img/vcblack.png" alt="Villa Caetano" class="logo" style="max-height: 70px; margin-bottom: 25px;">
+  <div class="card">
+    <!-- Clickable Logo (goes to homepage) -->
+    <a href="/">
+      <img src="assets/img/vcblack.png" alt="Villa Caetano" class="logo">
+    </a>
 
-  <h1>WiFi Access</h1>
-  <p class="subtitle">Scan the QR code to connect automatically</p>
+    <h1>WiFi Access</h1>
+    <p class="subtitle">Scan the QR code to connect automatically</p>
 
-  <!-- QR Code Image -->
-  <div class="qr-code">
-    <img src="assets/img/wifi-qr.png" alt="WiFi QR Code">
+    <!-- QR Code -->
+    <div class="qr-code">
+      <img src="assets/img/wifi-qr.png" alt="WiFi QR Code">
+    </div>
+
+    <!-- WiFi Details -->
+    <div class="wifi-info">
+      <p><strong>SSID:</strong> Villa Caetano Guest</p>
+      <p><strong>Password:</strong> Staymaster</p>
+    </div>
+
+    <!-- WiFi Logo -->
+    <img src="assets/img/wifi-logo.svg" alt="WiFi" class="wifi-logo">
   </div>
 
-  <!-- WiFi Details -->
-  <div class="wifi-info">
-    <p><strong>SSID:</strong> Villa Caetano Guest</p>
-    <p><strong>Password:</strong> Staymaster</p>
-  </div>
-
-  <!-- WiFi Logo -->
-  <img src="assets/img/wifi-logo.svg" alt="WiFi" style="max-width: 140px; margin-top: 15px;">
-
-  <a href="/" class="back-link">← Back to Villa Caetano</a>
-</div>
+</body>
+</html>
