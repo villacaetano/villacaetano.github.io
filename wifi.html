@@ -7,28 +7,23 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-  font-family: 'Poppins', sans-serif;
-  background: #f4f6f8;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 16px 16px;
-  color: #333;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px 16px;
+      color: #333;
+    }
 
     .card {
       background: #ffffff;
@@ -59,14 +54,14 @@
       margin-bottom: 22px;
     }
 
-.qr-code {
-  width: 240px;
-  height: 240px;
-  margin: 0 auto 22px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #eee;
-}
+    .qr-code {
+      width: 240px;
+      height: 240px;
+      margin: 0 auto 22px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #eee;
+    }
 
     .qr-code img {
       width: 100%;
@@ -103,28 +98,42 @@
 <body>
 
   <div class="card">
-    <!-- Clickable Logo (goes to homepage) -->
+    <!-- Clickable Logo -->
     <a href="/">
       <img src="assets/img/vcblack.png" alt="Villa Caetano" class="logo">
     </a>
 
     <h1>WiFi Access</h1>
-    <p class="subtitle">Scan the QR code to connect automatically</p>
+    <p class="subtitle">Scan or tap the QR code to connect</p>
 
-    <!-- QR Code -->
-    <div class="qr-code">
-      <img src="assets/img/wifi-qr.png" alt="WiFi QR Code">
-    </div>
+    <!-- QR Code (clickable) -->
+    <a id="wifi-link" href="#" style="display: block;">
+      <div class="qr-code">
+        <img src="assets/img/wifi-qr.png" alt="WiFi QR Code">
+      </div>
+    </a>
 
     <!-- WiFi Details -->
     <div class="wifi-info">
-      <p><strong>SSID:</strong> Villa Caetano Guest</p>
-      <p><strong>Password:</strong> Staymaster</p>
+      <p><strong>SSID:</strong> <span id="ssid-text"></span></p>
+      <p><strong>Password:</strong> <span id="password-text"></span></p>
     </div>
 
     <!-- WiFi Logo -->
     <img src="assets/img/wifi-logo.svg" alt="WiFi" class="wifi-logo">
   </div>
+
+  <script>
+    // ========== CHANGE ONLY THESE TWO LINES ==========
+    const WIFI_SSID = "Villa Caetano Guest";
+    const WIFI_PASSWORD = "Staymaster";
+    // =================================================
+
+    // Apply the values
+    document.getElementById("ssid-text").textContent = WIFI_SSID;
+    document.getElementById("password-text").textContent = WIFI_PASSWORD;
+    document.getElementById("wifi-link").href = `WIFI:T:WPA;S:${WIFI_SSID};P:${WIFI_PASSWORD};;`;
+  </script>
 
 </body>
 </html>
