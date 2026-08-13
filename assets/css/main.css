@@ -1223,3 +1223,123 @@ section,
   }
 }
 
+/* ===== Nearby Page Only ===== */
+.nearby-page #header {
+  background: #fff !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nearby-page #header .navmenu a {
+  color: #333 !important;
+}
+
+.nearby-page #header .navmenu a:hover,
+.nearby-page #header .navmenu a.active {
+  color: #2dc997 !important;
+}
+
+.nearby-page #header .logo img {
+  height: 55px !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+/* ===== Nearby Content Styles ===== */
+.section {
+  padding-top: 110px;
+}
+
+.section-title {
+  margin-bottom: 28px !important;
+}
+
+.section-title h2 {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  font-size: 1.05rem;
+  color: #666;
+}
+
+.section-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #2dc997;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Place Cards */
+.place-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.place-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+.place-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.place-card .card-body {
+  padding: 18px;
+}
+
+.place-card h4 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.place-card p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+/* Distance badge */
+.distance-badge {
+  display: inline-block;
+  background: #e8f8f2;
+  color: #1a7a5a;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
+
+/* Go here button */
+.btn-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #2dc997;
+  color: white !important;
+  padding: 7px 13px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-directions:hover {
+  background: #25b585;
+  color: white !important;
+}
