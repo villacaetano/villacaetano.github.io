@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Villa Caetano</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f5f7fa;
+    }
+    .admin-header {
+      background: #1a1a1a;
+      color: white;
+      padding: 25px 0;
+      margin-bottom: 40px;
+    }
+    .admin-header h1 {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+    .admin-header p {
+      margin: 5px 0 0;
+      opacity: 0.7;
+      font-size: 0.95rem;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #333;
+      border-bottom: 2px solid #2dc997;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    .link-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #222;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .link-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.09);
+      color: #2dc997;
+    }
+    .link-card i {
+      font-size: 1.4rem;
+      width: 28px;
+      text-align: center;
+    }
+    .link-card span {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .back-link {
+      color: #2dc997;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <h1>Villa Caetano Admin</h1>
+        <p>Quick access to all important links</p>
+      </div>
+      <a href="/" class="back-link">← Back to Website</a>
+    </div>
+  </div>
+
+  <div class="container pb-5">
+    <div class="row g-4">
+
+      <!-- BOOKING PLATFORMS -->
+      <div class="col-md-6 col-lg-4">
+        <div class="section-title">Booking Platforms</div>
+
+        <a href="https://www.airbnb.co.in/rooms/1704891866347043281" target="_blank" class="link-card">
+          <i class="bi bi-house-heart" style="color:#FF5A5F;"></i>
+          <span>Airbnb Listing</span>
+        </a>
+
+        <a href="https://staymaster.in/property-details/caetano" target="_blank" class="link-card">
+          <i class="bi bi-building" style="color:#2dc997;"></i>
+          <span>Staymaster</span>
+        </a>
+
+        <a href="https://www.booking.com/" target="_blank" class="link-card">
+          <i class="bi bi-calendar-check" style="color:#003580;"></i>
+          <span>Booking.com</span>
+        </a>
+
+        <a href="https://www.goibibo.com/" target="_blank" class="link-card">
+          <i class="bi bi-airplane" style="color:#ff6600;"></i>
+          <span>Goibibo</span>
+        </a>
+
+        <a href="https://www.makemytrip.com/" target="_blank" class="link-card">
+          <i class="bi bi-briefcase" style="color:#e71c23;"></i>
+          <span>MakeMyTrip</span>
+        </a>
+      </div>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="col-md-6 col-lg-4">
+        <div class="section-title">Social Media</div>
+
+        <a href="https://www.instagram.com/villacaetanogoa/" target="_blank" class="link-card">
+          <i class="bi bi-instagram" style="color:#E1306C;"></i>
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/villacaetanogoa/" target="_blank" class="link-card">
+          <i class="bi bi-facebook" style="color:#1877F2;"></i>
+          <span>Facebook</span>
+        </a>
+
+        <a href="https://www.threads.net/@villacaetanogoa" target="_blank" class="link-card">
+          <i class="bi bi-threads" style="color:#000;"></i>
+          <span>Threads</span>
+        </a>
+
+        <a href="https://wa.me/917020430564" target="_blank" class="link-card">
+          <i class="bi bi-whatsapp" style="color:#25D366;"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- ANALYTICS & TOOLS -->
+      <div class="col-md-6 col-lg-4">
+        <div class="section-title">Analytics & Tools</div>
+
+        <a href="https://analytics.google.com/" target="_blank" class="link-card">
+          <i class="bi bi-graph-up" style="color:#F9AB00;"></i>
+          <span>Google Analytics</span>
+        </a>
+
+        <a href="https://dash.cloudflare.com/" target="_blank" class="link-card">
+          <i class="bi bi-cloud" style="color:#F6821F;"></i>
+          <span>Cloudflare Analytics</span>
+        </a>
+
+        <a href="https://pagespeed.web.dev/analysis?url=https://villacaetano.com" target="_blank" class="link-card">
+          <i class="bi bi-speedometer2" style="color:#4285F4;"></i>
+          <span>PageSpeed Insights</span>
+        </a>
+
+        <a href="https://search.google.com/search-console" target="_blank" class="link-card">
+          <i class="bi bi-search" style="color:#34A853;"></i>
+          <span>Google Search Console</span>
+        </a>
+
+        <a href="https://g.page/r/CSmhO2K32fIWEBM/review" target="_blank" class="link-card">
+          <i class="bi bi-star" style="color:#FBBC05;"></i>
+          <span>Google Reviews Link</span>
+        </a>
+      </div>
+
+      <!-- OWNER / USEFUL -->
+      <div class="col-md-6 col-lg-4">
+        <div class="section-title">Owner Tools</div>
+
+        <a href="https://staymaster.s.gy/caetano-villa-3bhk" target="_blank" class="link-card">
+          <i class="bi bi-speedometer" style="color:#2dc997;"></i>
+          <span>Staymaster Owner Dashboard</span>
+        </a>
+
+        <a href="nearby.html" class="link-card">
+          <i class="bi bi-geo-alt" style="color:#e74c3c;"></i>
+          <span>Nearby Page</span>
+        </a>
+
+        <a href="wifi.html" class="link-card">
+          <i class="bi bi-wifi" style="color:#3498db;"></i>
+          <span>WiFi Page</span>
+        </a>
+      </div>
+
+      <!-- EXTRA USEFUL TOOLS -->
+      <div class="col-md-6 col-lg-4">
+        <div class="section-title">Extra Tools</div>
+
+        <a href="https://www.canva.com/" target="_blank" class="link-card">
+          <i class="bi bi-palette" style="color:#00C4CC;"></i>
+          <span>Canva</span>
+        </a>
+
+        <a href="https://github.com/" target="_blank" class="link-card">
+          <i class="bi bi-github" style="color:#333;"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
