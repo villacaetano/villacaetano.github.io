@@ -1223,17 +1223,3 @@ section,
   }
 }
 
-/* ===== Nearby Page – Header ===== */
-#header {
-  background: #fff !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-}
-
-#header .navmenu a {
-  color: #333 !important;
-}
-
-#header .navmenu a:hover,
-#header .navmenu a.active {
-  color: #2dc997 !important;
-}
