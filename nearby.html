@@ -14,19 +14,44 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    .nearby-hero {
-      height: 50vh;
-      min-height: 360px;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                  url('assets/img/hero-bg.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
+    /* ===== Nearby Page Only ===== */
+    .nearby-page #header {
+      background: #fff !important;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     }
-    .nearby-hero h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 10px; }
-    .nearby-hero p { font-size: 1.15rem; opacity: 0.9; }
+
+    .nearby-page #header .navmenu a {
+      color: #333 !important;
+    }
+
+    .nearby-page #header .navmenu a:hover,
+    .nearby-page #header .navmenu a.active {
+      color: #2dc997 !important;
+    }
+
+    .nearby-page #header .logo img {
+      height: 55px !important;
+      width: auto !important;
+      object-fit: contain;
+    }
+
+    /* ===== Content Styles ===== */
+    .section {
+      padding-top: 130px;
+    }
+
+    .section-title {
+      margin-bottom: 28px !important;
+    }
+
+    .section-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2dc997;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
 
     .place-card {
       background: #fff;
@@ -37,84 +62,89 @@
       transition: all 0.3s ease;
       border: 1px solid rgba(0,0,0,0.04);
     }
+
     .place-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 14px 35px rgba(0,0,0,0.1);
     }
+
     .place-card img {
       width: 100%;
-      height: 190px;
+      height: 160px;
       object-fit: cover;
     }
-    .place-card .card-body { padding: 22px; }
+
+    .place-card .card-body {
+      padding: 18px;
+    }
+
     .place-card h4 {
-      font-size: 1.15rem;
+      font-size: 1.08rem;
       font-weight: 600;
       margin-bottom: 8px;
       color: #222;
     }
+
     .place-card p {
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       color: #555;
       line-height: 1.55;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
+
     .distance-badge {
       display: inline-block;
       background: #e8f8f2;
       color: #1a7a5a;
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       font-weight: 600;
-      padding: 4px 11px;
+      padding: 3px 10px;
       border-radius: 30px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
+
     .btn-directions {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       background: #2dc997;
       color: white !important;
-      padding: 8px 15px;
+      padding: 7px 13px;
       border-radius: 8px;
-      font-size: 0.87rem;
+      font-size: 0.84rem;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.25s ease;
     }
+
     .btn-directions:hover {
       background: #25b585;
       color: white !important;
     }
-    .section-label {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #2dc997;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
   </style>
 </head>
+
 <body class="nearby-page">
 
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between px-4 px-lg-5">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/vcblack.png" alt="Villa Caetano" width="210" height="70">
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="assets/img/vcblack.png" alt="Villa Caetano">
       </a>
+
       <div class="d-flex align-items-center">
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html#hero">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#portfolio">Gallery</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#portfolio">Gallery</a></li>
+            <li><a href="/#contact">Contact</a></li>
             <li><a href="nearby.html" class="active">Nearby</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
+
         <a href="https://www.airbnb.co.in/rooms/1704891866347043281" target="_blank" rel="noopener"
            class="btn-book"
            onclick="gtag('event', 'book_now_click', {'event_category': 'Button','event_label': 'Book Now Button'});">
@@ -124,250 +154,251 @@
     </div>
   </header>
 
- <main>
-  <section class="section" style="padding-top: 130px;">
-    <div class="container">
+  <main>
+    <section class="section">
+      <div class="container">
 
-      <div class="section-title text-center mb-5" data-aos="fade-up">
-        <h2>Nearby Favourites</h2>
-        <p>Great places just minutes from Villa Caetano</p>
-      </div>
-
-      <!-- ==================== ESSENTIALS ==================== -->
-      <div class="mb-5" data-aos="fade-up">
-        <div class="section-label">Essentials</div>
-        <h2 class="mb-4">Stores</h2>
-        <div class="row g-4">
-
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/e8f5e9/2dc997?text=St+Anthony+Store" alt="St Anthony General Stores">
-              <div class="card-body">
-                <span class="distance-badge">Opposite the villa</span>
-                <h4>St. Anthony General Stores</h4>
-                <p>Fresh fruits, vegetables and all daily essentials. Right opposite Villa Caetano.</p>
-                <a href="https://www.google.com/maps/place/St.+Anthony+General+Stores/@15.6139242,73.8024253,65m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/f3e5f5/7b1fa2?text=KS+Vine+Stores" alt="KS Vine Stores">
-              <div class="card-body">
-                <span class="distance-badge">Next door</span>
-                <h4>KS Vine Stores</h4>
-                <p>Just next door. Perfect for wines, spirits and all beverage needs.</p>
-                <a href="https://www.google.com/maps/search/KS+Vine+Stores+Siolim" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>Nearby Favourites</h2>
+          <p>Great places just minutes from Villa Caetano</p>
         </div>
-      </div>
 
-      <!-- ==================== CAFES ==================== -->
-      <div class="mb-5" data-aos="fade-up">
-        <div class="section-label">Coffee & Desserts</div>
-        <h2 class="mb-4">Cafés</h2>
-        <div class="row g-4">
+        <!-- ESSENTIALS -->
+        <div class="mb-5" data-aos="fade-up">
+          <div class="section-label">Essentials</div>
+          <h2 class="mb-4">Stores</h2>
+          <div class="row g-4">
+            <!-- St Anthony -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/e8f5e9/2dc997?text=St+Anthony+Store" alt="St Anthony General Stores">
+                <div class="card-body">
+                  <span class="distance-badge">Opposite the villa</span>
+                  <h4>St. Anthony General Stores</h4>
+                  <p>Fresh fruits, vegetables and all daily essentials. Right opposite Villa Caetano.</p>
+                  <a href="https://www.google.com/maps/place/St.+Anthony+General+Stores/@15.6139242,73.8024253,65m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
 
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/e3f2fd/1565c0?text=alag." alt="alag.">
-              <div class="card-body">
-                <span class="distance-badge">5–7 min drive</span>
-                <h4>alag.</h4>
-                <p>Specialty coffee, cloud cheesecake and Japanese-style sandos. One of the best cafés nearby.</p>
-                <a href="https://www.google.com/maps/place/alag./@15.6138906,73.775975,1319m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
+            <!-- KS Vine -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/f3e5f5/7b1fa2?text=KS+Vine+Stores" alt="KS Vine Stores">
+                <div class="card-body">
+                  <span class="distance-badge">Next door</span>
+                  <h4>KS Vine Stores</h4>
+                  <p>Just next door. Perfect for wines, spirits and all beverage needs.</p>
+                  <a href="https://www.google.com/maps/search/KS+Vine+Stores+Siolim" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/fff3e0/ef6c00?text=MOKA" alt="MOKA">
-              <div class="card-body">
-                <span class="distance-badge">6–8 min drive</span>
-                <h4>MOKA Dessert & Coffee Bar</h4>
-                <p>Excellent desserts and coffee in a nice relaxed setting.</p>
-                <a href="https://www.google.com/maps/place/MOKA+Dessert+and+Coffee+Bar/@15.6135964,73.769543,1047m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/fce4ec/c2185b?text=Mimosa" alt="Mimosa Cafe">
-              <div class="card-body">
-                <span class="distance-badge">Walkable</span>
-                <h4>Mimosa Cafe</h4>
-                <p>Nice nearby spot for snacks, coffee and a quick break.</p>
-                <a href="https://www.google.com/maps/search/Mimosa+Cafe+Siolim" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      <!-- ==================== RESTAURANTS & BARS ==================== -->
-      <div class="mb-5" data-aos="fade-up">
-        <div class="section-label">Food & Drinks</div>
-        <h2 class="mb-4">Restaurants & Bars</h2>
-        <div class="row g-4">
+        <!-- CAFES -->
+        <div class="mb-5" data-aos="fade-up">
+          <div class="section-label">Coffee & Desserts</div>
+          <h2 class="mb-4">Cafés</h2>
+          <div class="row g-4">
+            <!-- alag -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/e3f2fd/1565c0?text=alag." alt="alag.">
+                <div class="card-body">
+                  <span class="distance-badge">5–7 min drive</span>
+                  <h4>alag.</h4>
+                  <p>Specialty coffee, cloud cheesecake and Japanese-style sandos. One of the best cafés nearby.</p>
+                  <a href="https://www.google.com/maps/place/alag./@15.6138906,73.775975,1319m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
 
-          <!-- Hosa -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/e3f2fd/0277bd?text=Hosa" alt="Hosa">
-              <div class="card-body">
-                <span class="distance-badge">6–8 min drive</span>
-                <h4>Hosa</h4>
-                <p>Highly rated modern restaurant. Excellent food and atmosphere.</p>
-                <a href="https://www.google.com/maps/place/Hosa/@15.6138651,73.7688349,1047m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
+            <!-- MOKA -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/fff3e0/ef6c00?text=MOKA" alt="MOKA">
+                <div class="card-body">
+                  <span class="distance-badge">6–8 min drive</span>
+                  <h4>MOKA Dessert & Coffee Bar</h4>
+                  <p>Excellent desserts and coffee in a nice relaxed setting.</p>
+                  <a href="https://www.google.com/maps/place/MOKA+Dessert+and+Coffee+Bar/@15.6135964,73.769543,1047m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mimosa -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/fce4ec/c2185b?text=Mimosa" alt="Mimosa Cafe">
+                <div class="card-body">
+                  <span class="distance-badge">Walkable</span>
+                  <h4>Mimosa Cafe</h4>
+                  <p>Nice nearby spot for snacks, coffee and a quick break.</p>
+                  <a href="https://www.google.com/maps/search/Mimosa+Cafe+Siolim" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- Boilermaker -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/f3e5f5/6a1b9a?text=Boilermaker" alt="Boilermaker">
-              <div class="card-body">
-                <span class="distance-badge">8–10 min drive</span>
-                <h4>Boilermaker</h4>
-                <p>Highly rated bar. Great cocktails and vibe.</p>
-                <a href="https://www.google.com/maps/place/Boilermaker/@15.6146033,73.7655347,2638m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Thalassa -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/e8eaf6/3f51b5?text=Thalassa" alt="Thalassa">
-              <div class="card-body">
-                <span class="distance-badge">10–12 min drive</span>
-                <h4>Thalassa</h4>
-                <p>Iconic Greek restaurant with beautiful views. Perfect for sunset dining.</p>
-                <a href="https://www.google.com/maps/place/Thalasasa/@15.6127546,73.7558562,2638m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Kiki by the Sea -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/fff3e0/ef6c00?text=Kiki+by+the+Sea" alt="Kiki by the Sea">
-              <div class="card-body">
-                <span class="distance-badge">12–15 min drive</span>
-                <h4>Kiki by the Sea</h4>
-                <p>Famous riverside/seaside restaurant. Excellent for sundowners and cocktails.</p>
-                <a href="https://www.google.com/maps/place/Kiki+-+By+the+sea/@15.6127546,73.7558562,2638m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Amancio -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/fff8e1/f9a825?text=Amancio" alt="Amancio">
-              <div class="card-body">
-                <span class="distance-badge">5–8 min drive</span>
-                <h4>Amancio Classic</h4>
-                <p>Excellent fresh seafood. Daily catch from the local market, cooked simply and perfectly.</p>
-                <a href="https://www.google.com/maps/search/Amancio+Classic+Siolim" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Saiba -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/e8f5e9/2e7d32?text=Saiba" alt="Saiba">
-              <div class="card-body">
-                <span class="distance-badge">5–7 min drive</span>
-                <h4>Saiba Bar & Restaurant</h4>
-                <p>Best for authentic Goan food, especially lunch. Local favourite.</p>
-                <a href="https://www.google.com/maps/place/Saiba+bar+and+restaurant(evening+beautiful)/@15.6115032,73.8128727,104m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- One8 Commune -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/e0f2f1/00695c?text=One8+Commune" alt="One8 Commune">
-              <div class="card-body">
-                <span class="distance-badge">10–15 min drive</span>
-                <h4>One8 Commune</h4>
-                <p>Virat Kohli’s riverside restaurant. Stylish space with global comfort food and great views.</p>
-                <a href="https://www.google.com/maps/search/One8+Commune+Siolim" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- De Cero’s (second last) -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/e0f7fa/00838f?text=De+Cero's" alt="De Cero's">
-              <div class="card-body">
-                <span class="distance-badge">Very close</span>
-                <h4>De Cero’s Family Restaurant</h4>
-                <p>Family-friendly place for food and drinks, just a short walk away.</p>
-                <a href="https://www.google.com/maps/place/De+Cero's+Family+Food-Drink+Restaurant/@15.6132003,73.8016292,262m" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Maya (last) -->
-          <div class="col-md-6 col-lg-4">
-            <div class="place-card">
-              <img src="https://placehold.co/600x400/fce4ec/ad1457?text=Maya" alt="Maya">
-              <div class="card-body">
-                <span class="distance-badge">Short drive</span>
-                <h4>Maya</h4>
-                <p>Refined dining option nearby with good ambience and consistent reviews.</p>
-                <a href="https://www.google.com/maps/search/Maya+Restaurant+Siolim+Goa" target="_blank" class="btn-directions">
-                  <i class="bi bi-geo-alt"></i> Go here
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-    </div>
-  </section>
-</main>
+        <!-- RESTAURANTS & BARS -->
+        <div class="mb-5" data-aos="fade-up">
+          <div class="section-label">Food & Drinks</div>
+          <h2 class="mb-4">Restaurants & Bars</h2>
+          <div class="row g-4">
+
+            <!-- Hosa -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/e3f2fd/0277bd?text=Hosa" alt="Hosa">
+                <div class="card-body">
+                  <span class="distance-badge">6–8 min drive</span>
+                  <h4>Hosa</h4>
+                  <p>Highly rated modern restaurant. Excellent food and atmosphere.</p>
+                  <a href="https://www.google.com/maps/place/Hosa/@15.6138651,73.7688349,1047m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Boilermaker -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/f3e5f5/6a1b9a?text=Boilermaker" alt="Boilermaker">
+                <div class="card-body">
+                  <span class="distance-badge">8–10 min drive</span>
+                  <h4>Boilermaker</h4>
+                  <p>Highly rated bar. Great cocktails and vibe.</p>
+                  <a href="https://www.google.com/maps/place/Boilermaker/@15.6146033,73.7655347,2638m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thalassa -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/e8eaf6/3f51b5?text=Thalassa" alt="Thalassa">
+                <div class="card-body">
+                  <span class="distance-badge">10–12 min drive</span>
+                  <h4>Thalassa</h4>
+                  <p>Iconic Greek restaurant with beautiful views. Perfect for sunset dining.</p>
+                  <a href="https://www.google.com/maps/place/Thalasasa/@15.6127546,73.7558562,2638m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kiki -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/fff3e0/ef6c00?text=Kiki+by+the+Sea" alt="Kiki by the Sea">
+                <div class="card-body">
+                  <span class="distance-badge">12–15 min drive</span>
+                  <h4>Kiki by the Sea</h4>
+                  <p>Famous riverside/seaside restaurant. Excellent for sundowners and cocktails.</p>
+                  <a href="https://www.google.com/maps/place/Kiki+-+By+the+sea/@15.6127546,73.7558562,2638m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amancio -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/fff8e1/f9a825?text=Amancio" alt="Amancio">
+                <div class="card-body">
+                  <span class="distance-badge">5–8 min drive</span>
+                  <h4>Amancio Classic</h4>
+                  <p>Excellent fresh seafood. Daily catch from the local market, cooked simply and perfectly.</p>
+                  <a href="https://www.google.com/maps/search/Amancio+Classic+Siolim" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Saiba -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/e8f5e9/2e7d32?text=Saiba" alt="Saiba">
+                <div class="card-body">
+                  <span class="distance-badge">5–7 min drive</span>
+                  <h4>Saiba Bar & Restaurant</h4>
+                  <p>Best for authentic Goan food, especially lunch. Local favourite.</p>
+                  <a href="https://www.google.com/maps/place/Saiba+bar+and+restaurant(evening+beautiful)/@15.6115032,73.8128727,104m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- One8 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/e0f2f1/00695c?text=One8+Commune" alt="One8 Commune">
+                <div class="card-body">
+                  <span class="distance-badge">10–15 min drive</span>
+                  <h4>One8 Commune</h4>
+                  <p>Virat Kohli’s riverside restaurant. Stylish space with global comfort food and great views.</p>
+                  <a href="https://www.google.com/maps/search/One8+Commune+Siolim" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- De Cero’s -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/e0f7fa/00838f?text=De+Cero's" alt="De Cero's">
+                <div class="card-body">
+                  <span class="distance-badge">Very close</span>
+                  <h4>De Cero’s Family Restaurant</h4>
+                  <p>Family-friendly place for food and drinks, just a short walk away.</p>
+                  <a href="https://www.google.com/maps/place/De+Cero's+Family+Food-Drink+Restaurant/@15.6132003,73.8016292,262m" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Maya -->
+            <div class="col-md-6 col-lg-4">
+              <div class="place-card">
+                <img src="https://placehold.co/600x400/fce4ec/ad1457?text=Maya" alt="Maya">
+                <div class="card-body">
+                  <span class="distance-badge">Short drive</span>
+                  <h4>Maya</h4>
+                  <p>Refined dining option nearby with good ambience and consistent reviews.</p>
+                  <a href="https://www.google.com/maps/search/Maya+Restaurant+Siolim+Goa" target="_blank" class="btn-directions">
+                    <i class="bi bi-geo-alt"></i> Go here
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer id="footer" class="footer dark-background">
