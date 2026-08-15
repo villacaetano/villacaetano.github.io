@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Guide | Villa Caetano</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #2dc997;
+      --accent-dark: #25b585;
+    }
+
+    body {
+      background: #f2f4f7;
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .guide-hero {
+      height: 48vh;
+      min-height: 340px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
+                  url('assets/img/hero-bg.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .logo-row img {
+      max-height: 52px;
+      width: auto;
+    }
+
+    .logo-row .staymaster-logo {
+      max-height: 38px;
+      background: rgba(255,255,255,0.92);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .guide-hero h1 {
+      font-family: 'Homemade Apple', cursive;
+      font-size: 2.6rem;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.3);
+    }
+
+    .guide-hero p {
+      font-size: 1rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2.2s infinite;
+      opacity: 0.8;
+      color: white;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+
+    .section-card {
+      background: white;
+      border-radius: 20px;
+      padding: 26px 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.055);
+      border: 1px solid rgba(0,0,0,0.03);
+      transition: all 0.3s ease;
+    }
+
+    .section-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.09);
+    }
+
+    .section-card.compact {
+      padding: 20px 22px;
+    }
+
+    .section-card h2 {
+      font-size: 1.22rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .section-card h2 i {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, rgba(45,201,151,0.15), rgba(45,201,151,0.05));
+      color: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .rule-item, .info-item {
+      margin-bottom: 12px;
+    }
+
+    .rule-item strong, .info-item strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #1a1a1a;
+      font-size: 0.95rem;
+    }
+
+    .check-times {
+      font-size: 0.86rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .location-box {
+      background: #f0faf6;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .location-box .loc-text {
+      font-size: 0.9rem;
+      color: #1a7a5a;
+    }
+
+    .location-box .loc-text strong {
+      display: block;
+      color: #156b4d;
+      margin-bottom: 2px;
+      font-size: 0.92rem;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--accent);
+      color: white !important;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.88rem;
+      margin: 4px 5px 4px 0;
+      transition: all 0.25s ease;
+      box-shadow: 0 3px 12px rgba(45, 201, 151, 0.22);
+    }
+
+    .contact-btn:hover {
+      background: var(--accent-dark);
+      color: white !important;
+      transform: translateY(-2px);
+    }
+
+    .contact-btn.whatsapp { background: #25d366; }
+    .contact-btn.whatsapp:hover { background: #1ebe57; }
+    .contact-btn.call { background: #3498db; }
+    .contact-btn.call:hover { background: #2980b9; }
+
+    .quick-links a {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      background: #f0faf6;
+      color: #1a7a5a;
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.93rem;
+      transition: all 0.25s ease;
+    }
+
+    .quick-links a:hover {
+      background: #e0f5ec;
+      transform: translateX(5px);
+    }
+
+    .appliance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+    }
+
+    @media (max-width: 575px) {
+      .appliance-grid { grid-template-columns: 1fr; }
+      .guide-hero h1 { font-size: 2.1rem; }
+      .logo-row img { max-height: 44px; }
+      .logo-row .staymaster-logo { max-height: 32px; }
+    }
+
+    .appliance-item {
+      background: #f7f9fb;
+      padding: 13px;
+      border-radius: 12px;
+      font-size: 0.87rem;
+      transition: all 0.25s ease;
+    }
+
+    .appliance-item:hover { background: #eef8f4; }
+    .appliance-item strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #1a1a1a;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding: 14px 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #1a1a1a;
+      font-size: 0.95rem;
+    }
+    .faq-item p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.55;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="guide-hero">
+    <div>
+      <div class="logo-row" data-aos="zoom-in">
+        <img src="assets/img/logo.png" alt="Villa Caetano">
+        <img src="assets/img/staymasterlogo.png" alt="Staymaster" class="staymaster-logo">
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Welcome to Villa Caetano</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Your digital guidebook for a perfect stay</p>
+    </div>
+    <div class="scroll-hint">
+      <i class="bi bi-chevron-down" style="font-size: 1.4rem;"></i>
+    </div>
+  </section>
+
+  <div class="container py-4" style="max-width: 720px;">
+
+    <!-- 1. WELCOME -->
+    <div class="section-card" id="welcome" data-aos="fade-up">
+      <h2><i class="bi bi-heart"></i> Welcome</h2>
+      <p>Thank you for choosing <strong>Villa Caetano</strong>! We’re so happy to host you.</p>
+      <p>Our private 3-bedroom villa is nestled in peaceful Siolim, North Goa, with a private pool, tropical garden and pool house — the perfect base for exploring Anjuna, Vagator and the surrounding beaches.</p>
+      
+      <!-- Location first -->
+      <div class="location-box">
+        <div class="loc-text">
+          <strong><i class="bi bi-geo-alt-fill me-1"></i> Location</strong>
+          Siolim, Marna, North Goa 403507
+        </div>
+        <a href="https://www.google.com/maps/place/Villa+Caetano/@15.6139314,73.8021659,17z" 
+           target="_blank" class="contact-btn">
+          <i class="bi bi-geo-alt-fill"></i> Directions
+        </a>
+      </div>
+
+      <div class="check-times">
+        <div class="info-item">
+          <strong>Check-in</strong>
+          After 3:00 PM · The caretaker will meet you and hand over the keys.
+        </div>
+        <div class="info-item">
+          <strong>Check-out</strong>
+          Before 11:00 AM · Please leave the keys with the caretaker or as instructed.
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 2. EQUIPMENT -->
+    <div class="section-card" id="equipment" data-aos="fade-up">
+      <h2><i class="bi bi-tools"></i> Household Equipment</h2>
+      <p class="mb-3">Quick guides for the main appliances:</p>
+
+      <div class="appliance-grid">
+        <div class="appliance-item">
+          <strong>Air Conditioning</strong>
+          Each bedroom has its own AC. Please switch off when leaving the room.
+        </div>
+        <div class="appliance-item">
+          <strong>Kitchen</strong>
+          Fridge, microwave, gas stove, utensils, plates and glasses.
+        </div>
+        <div class="appliance-item">
+          <strong>Coffee / Tea</strong>
+          Kettle and basic tea/coffee supplies provided.
+        </div>
+        <div class="appliance-item">
+          <strong>Washing Machine</strong>
+          Available for guest use. Detergent provided.
+        </div>
+        <div class="appliance-item">
+          <strong>Clothes Dryer / Drying Area</strong>
+          Outdoor clothes line / drying area available.
+        </div>
+        <div class="appliance-item">
+          <strong>Iron & Ironing Board</strong>
+          Available in the villa. Ask caretaker if needed.
+        </div>
+        <div class="appliance-item">
+          <strong>Smart TV</strong>
+          Living room TV supports Netflix / YouTube.
+        </div>
+        <div class="appliance-item">
+          <strong>Safe / Locker</strong>
+          Small safe available. Ask caretaker for the code.
+        </div>
+      </div>
+    </div>
+	
+	    <!-- 3. WIFI -->
+    <div class="section-card" id="wifi" data-aos="fade-up">
+      <h2><i class="bi bi-wifi"></i> WiFi</h2>
+      <p>High-speed WiFi is available throughout the villa.</p>
+      <p class="mb-3">
+        <strong>Network:</strong> Villa Caetano Guest<br>
+        <strong>Password:</strong> Staymaster
+      </p>
+      <a href="wifi.html" class="contact-btn">
+        <i class="bi bi-qr-code"></i> Open WiFi QR Page
+      </a>
+    </div>
+
+<!-- 4. LOCAL -->
+<div class="section-card" id="local" data-aos="fade-up">
+  <h2><i class="bi bi-geo-alt"></i> Local Recommendations</h2>
+  
+  <p>
+    Siolim is one of North Goa’s most charming villages — quiet, leafy and full of character, 
+    yet just a short drive from the lively beaches of Anjuna and Vagator. 
+    The area is known for its riverside walks, beautiful Portuguese-era homes, 
+    excellent cafés and some of the best seafood restaurants in Goa.
+  </p>
+  <p>
+    From authentic Goan thalis and sunset cocktails to specialty coffee and hidden beach shacks, 
+    there’s something special around every corner.
+  </p>
+
+  <div class="quick-links mt-3">
+    <a href="nearby.html">
+      <i class="bi bi-map"></i> Open Nearby Guide
+    </a>
+  </div>
+</div>
+
+    <!-- 5. CARETAKER + HOST -->
+    <div class="section-card" id="caretaker" data-aos="fade-up">
+      <h2><i class="bi bi-person-badge"></i> Caretaker & Host Contact</h2>
+      
+      <p class="mb-2"><strong>Caretaker</strong> <span class="text-muted small">(available at all times)</span></p>
+      <div class="mb-3">
+        <a href="tel:+917908113022" class="contact-btn call">
+          <i class="bi bi-telephone"></i> Call Caretaker
+        </a>
+        <a href="https://wa.me/917908113022?text=Hi%2C%20I%20am%20a%20guest%20at%20Villa%20Caetano" 
+           class="contact-btn whatsapp" target="_blank">
+          <i class="bi bi-whatsapp"></i> WhatsApp Caretaker
+        </a>
+      </div>
+
+      <p class="mb-2"><strong>Host</strong></p>
+      <div>
+        <a href="tel:+919226934609" class="contact-btn call">
+          <i class="bi bi-telephone"></i> Call Host
+        </a>
+        <a href="https://wa.me/919226934609?text=Hi%2C%20I%20am%20a%20guest%20at%20Villa%20Caetano" 
+           class="contact-btn whatsapp" target="_blank">
+          <i class="bi bi-whatsapp"></i> WhatsApp Host
+        </a>
+      </div>
+    </div>
+
+    <!-- 6. HOUSE RULES -->
+    <div class="section-card compact" id="rules" data-aos="fade-up">
+      <h2><i class="bi bi-shield-check"></i> House Rules</h2>
+      
+      <div class="rule-item">
+        <strong>Noise</strong>
+        Please keep noise down after <strong>10:00 PM</strong>.
+      </div>
+      <div class="rule-item">
+        <strong>Recycling & Waste</strong>
+        Separate bins are provided — thank you for helping us stay eco-friendly.
+      </div>
+      <div class="rule-item">
+        <strong>Pool & Outdoor Areas</strong>
+        Keep the area clean and avoid loud music late at night.
+      </div>
+      <div class="rule-item mb-0">
+        <strong>No Smoking Indoors</strong>
+        Smoking is allowed only in outdoor areas.
+      </div>
+    </div>
+
+
+	
+	
+<!-- 7. FAQ (entire section as accordion) -->
+<div class="section-card" id="faq" data-aos="fade-up" style="padding:0; overflow:hidden;">
+  
+  <div class="accordion" id="faqMainAccordion">
+    <div class="accordion-item" style="border:none;">
+      
+      <h2 class="accordion-header" style="margin:0;">
+        <button class="accordion-button collapsed" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#faqAll"
+                style="background:white; box-shadow:none; font-weight:600; font-size:1.22rem; color:#1a1a1a; padding:22px 24px;">
+          <i class="bi bi-question-circle me-2" style="color:#2dc997; font-size:1.25rem;"></i>
+          Frequently Asked Questions
+        </button>
+      </h2>
+
+      <div id="faqAll" class="accordion-collapse collapse" data-bs-parent="#faqMainAccordion">
+        <div class="accordion-body" style="padding:0 24px 24px 24px;">
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">What is the best way to reach the villa?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              The villa is 22.6 km from Mopa Airport, 15.7 km from Thivim Railway Station and 8.5 km from Mapusa Bus Stand. We can help you with more information on how to get here once you have booked.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">Can I drive all the way up to the entrance?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              Yes, you can drive right up to the entrance of the villa.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">Is parking available?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              Yes, parking is available for up to 5–6 cars.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">Is this property part of a society / complex?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              No. Villa Caetano is a completely independent private villa.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">Is the caretaker available at all times?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              Yes, the caretaker is available at all times to assist you during your stay.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">What is the kitchen equipped with?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              The kitchen is fully equipped with a fridge, microwave, gas stove, utensils, plates, glasses, and basic cooking essentials.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">Is WiFi available?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              Yes, high-speed WiFi is available throughout the villa.<br>
+              Network: <strong>Villa Caetano Guest</strong> · Password: <strong>Staymaster</strong>
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid #eee; padding:14px 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">Is power backup available?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              Yes, a power inverter is available at the villa.
+            </p>
+          </div>
+
+          <div style="padding:14px 0 0 0;">
+            <strong style="display:block; margin-bottom:5px; color:#1a1a1a; font-size:0.95rem;">Is alcohol allowed?</strong>
+            <p style="margin:0; font-size:0.9rem; color:#555; line-height:1.55;">
+              Yes, alcohol is allowed. Please use the bins provided to segregate the bottles. Thank you.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. CONCIERGE -->
+<div class="section-card" id="concierge" data-aos="fade-up">
+  <h2 class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+    <span class="d-flex align-items-center gap-2">
+      <i class="bi bi-stars"></i> Concierge Services
+    </span>
+    <a href="https://staymaster.in/concierge" target="_blank" rel="noopener">
+      <img src="assets/img/staymasterlogo.png" alt="Staymaster" style="height: 28px; width: auto;">
+    </a>
+  </h2>
+  
+  <p>Need help during your stay? We can assist with:</p>
+  <ul class="mb-3">
+    <li>Airport / taxi transfers</li>
+    <li>Grocery shopping & delivery</li>
+    <li>Private chef or home-cooked meals</li>
+    <li>Scooter / bike / car rental</li>
+    <li>Restaurant reservations</li>
+    <li>Sightseeing recommendations</li>
+    <li>Massage or wellness at the villa</li>
+  </ul>
+  
+  <a href="https://wa.me/919226934609?text=Hi%2C%20I%20am%20staying%20at%20Villa%20Caetano%20and%20need%20some%20help" 
+     class="contact-btn whatsapp" target="_blank">
+    <i class="bi bi-whatsapp"></i> Request Concierge Help
+  </a>
+  
+  <a href="https://staymaster.in/concierge" target="_blank" class="contact-btn" style="margin-left:6px;">
+    <i class="bi bi-box-arrow-up-right"></i> Staymaster Concierge
+  </a>
+</div>
+
+
+	
+	<!-- Footer -->
+<div class="text-center text-muted small py-4" data-aos="fade-up">
+  <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+    <img src="assets/img/vcblack.png" alt="Villa Caetano" style="max-height: 40px;">
+    <img src="assets/img/staymasterlogo.png" alt="Staymaster" style="max-height: 26px; opacity: 0.85;">
+  </div>
+  <p>Have a wonderful stay at Villa Caetano 🌴</p>
+  <p class="mb-0">Siolim, North Goa</p>
+</div>
+
+  </div>
+
+
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({ duration: 750, once: true, offset: 60 });
+
+    document.querySelectorAll('.floating-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const floatNav = document.getElementById('floatNav');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 280) floatNav.classList.add('show');
+      else floatNav.classList.remove('show');
+
+      let current = '';
+      document.querySelectorAll('.section-card').forEach(section => {
+        if (currentScroll >= section.offsetTop - 150) current = section.getAttribute('id');
+      });
+      document.querySelectorAll('.floating-nav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
