@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Guide Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      font-family: 'Inter', sans-serif;
+      padding: 24px;
+    }
+
+    .card {
+      width: 105mm;
+      min-height: 148mm;
+      background: linear-gradient(165deg, #ffffff 0%, #f4f7f6 100%);
+      border-radius: 24px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -50px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(45,201,151,0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      bottom: -70px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(0,0,0,0.04), transparent 70%);
+      pointer-events: none;
+    }
+
+    .top,
+    .bottom,
+    .qr-wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .villa-logo {
+      height: 70px;
+      width: auto;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #2dc997;
+      background: rgba(45,201,151,0.1);
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.4px;
+      margin-bottom: 6px;
+    }
+
+    .desc {
+      font-size: 0.92rem;
+      color: #666;
+      line-height: 1.45;
+      max-width: 250px;
+    }
+
+    .qr-wrap {
+      background: #111;
+      border-radius: 20px;
+      padding: 16px;
+      width: auto;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+    }
+
+    .qr-inner {
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-inner img {
+      width: 148px;
+      height: 148px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .url {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    .footer-note {
+      font-size: 0.68rem;
+      color: #999;
+      letter-spacing: 0.4px;
+    }
+
+    .print-hint {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2dc997;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 9px 16px;
+      border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(45,201,151,0.35);
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        width: 105mm;
+        height: 148mm;
+      }
+      .print-hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="top">
+      <img src="assets/img/vcblack.png" alt="Villa Caetano" class="villa-logo">
+      <div class="badge">Digital Guide</div>
+      <div class="title">Scan to explore</div>
+      <p class="desc">WiFi · House rules · Contacts · Nearby places</p>
+    </div>
+
+    <div class="qr-wrap">
+      <div class="qr-inner">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://villacaetano.com/welcome"
+             alt="Guest Guide QR">
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="url">villacaetano.com/welcome</div>
+      <div class="footer-note">Siolim, North Goa</div>
+    </div>
+  </div>
+
+  <div class="print-hint">Press Ctrl/Cmd + P to print</div>
+
+</body>
+</html>
