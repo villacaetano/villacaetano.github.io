@@ -53,7 +53,6 @@
         padding-right: 2.8rem !important;
       }
     }
-
     /* ===== Book Now Button ===== */
     .btn-book {
       display: inline-flex;
@@ -75,27 +74,23 @@
       z-index: 10;
       animation: soft-pulse 2.5s infinite;
     }
-
     .btn-book:hover {
       background: #25b585;
       color: #fff !important;
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(45, 201, 151, 0.45);
     }
-
     @keyframes soft-pulse {
-      0%   { box-shadow: 0 4px 15px rgba(45, 201, 151, 0.3); }
-      50%  { box-shadow: 0 4px 25px rgba(45, 201, 151, 0.55); }
+      0% { box-shadow: 0 4px 15px rgba(45, 201, 151, 0.3); }
+      50% { box-shadow: 0 4px 25px rgba(45, 201, 151, 0.55); }
       100% { box-shadow: 0 4px 15px rgba(45, 201, 151, 0.3); }
     }
-
     /* Desktop */
     @media (min-width: 1200px) {
       .navmenu ul {
         gap: 4px;
       }
     }
-
     /* Mobile */
     @media (max-width: 1199px) {
       .btn-book {
@@ -104,13 +99,69 @@
         font-size: 0.85rem;
       }
     }
-
     @media (max-width: 575px) {
       .btn-book {
         padding: 7px 14px;
         font-size: 0.8rem;
         margin-left: 8px;
       }
+    }
+
+    /* About image */
+    #about img {
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+      transition: transform 0.4s ease;
+    }
+    #about img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Gallery cards */
+    .portfolio .portfolio-content {
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+    .portfolio .portfolio-content:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    }
+    .portfolio .portfolio-content img {
+      transition: transform 0.5s ease;
+    }
+    .portfolio .portfolio-content:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Contact icons */
+    #contact .info-item i {
+      transition: all 0.3s ease;
+    }
+    #contact .info-item:hover i {
+      color: #2dc997 !important;
+      transform: scale(1.1);
+    }
+    #contact .social-links a {
+      transition: transform 0.25s ease;
+      display: inline-block;
+    }
+    #contact .social-links a:hover {
+      transform: translateY(-4px) scale(1.08);
+    }
+
+    /* WhatsApp pulse */
+    .whatsapp-float {
+      transition: all 0.3s ease;
+      animation: wa-pulse 2.4s infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    @keyframes wa-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+      70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
   </style>
   <!-- Structured Data -->
@@ -176,24 +227,22 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between px-4 px-lg-5">
-
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="Villa Caetano" width="210" height="70">
       </a>
-
       <div class="d-flex align-items-center">
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Gallery</a></li>
+            <li><a href="nearby.html">Nearby</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
- 
-         <a href="https://www.airbnb.co.in/rooms/1704891866347043281" 
-          target="_blank" 
+         <a href="https://www.airbnb.co.in/rooms/1704891866347043281"
+          target="_blank"
           rel="noopener"
           class="btn-book"
           onclick="gtag('event', 'book_now_click', {
@@ -202,12 +251,10 @@
           });">
            Book Now
            </a>
-    
+   
       </div>
-
     </div>
   </header>
-
   <main class="main">
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero section dark-background" style="height: 100vh; background-image: url('assets/img/hero-bg.jpg'); background-size: cover; background-position: center;">
@@ -225,7 +272,6 @@
         </div>
       </div>
     </section>
-
     <!-- ======= About Section ======= -->
     <section id="about" class="about section">
       <div class="container">
@@ -316,7 +362,6 @@
         </div>
       </div>
     </section>
-
     <!-- ======= Gallery Section ======= -->
     <section id="portfolio" class="portfolio section">
       <div class="container section-title" data-aos="fade-up">
@@ -336,7 +381,6 @@
             <li data-filter=".filter-facade">Facade & Exterior</li>
           </ul>
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
             <!-- Bedrooms -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom">
               <div class="portfolio-content h-100">
@@ -362,7 +406,6 @@
                 <div class="portfolio-info"><h4>Bedroom</h4><p>Peaceful retreat</p></div>
               </div>
             </div>
-
             <!-- Bathrooms -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bathrooms">
               <div class="portfolio-content h-100">
@@ -388,7 +431,6 @@
                 <div class="portfolio-info"><h4>Bathroom</h4><p>Spacious design</p></div>
               </div>
             </div>
-
             <!-- Living & Dining -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-living">
               <div class="portfolio-content h-100">
@@ -454,7 +496,6 @@
                 <div class="portfolio-info"><h4>Living Overview</h4><p>Open plan living</p></div>
               </div>
             </div>
-
             <!-- Kitchen -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kitchen">
               <div class="portfolio-content h-100">
@@ -480,7 +521,6 @@
                 <div class="portfolio-info"><h4>Pantry</h4><p>Well organized storage</p></div>
               </div>
             </div>
-
             <!-- Garden -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-garden">
               <div class="portfolio-content h-100">
@@ -506,7 +546,6 @@
                 <div class="portfolio-info"><h4>Garden Pathway</h4><p>Serene walkways</p></div>
               </div>
             </div>
-
             <!-- Pool -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-pool">
               <div class="portfolio-content h-100">
@@ -540,7 +579,6 @@
                 <div class="portfolio-info"><h4>Evening Pool</h4><p>Night ambiance</p></div>
               </div>
             </div>
-
             <!-- Facade -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-facade">
               <div class="portfolio-content h-100">
@@ -566,22 +604,18 @@
                 <div class="portfolio-info"><h4>Rooftop Terrace</h4><p>360° views</p></div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-
     <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact section">
   <div class="container section-title" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Get in touch with Villa Caetano</p>
   </div>
-
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row g-5 align-items-stretch">
-
       <!-- Google Map -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
         <iframe style="border:0; width: 100%; height: 100%; min-height: 420px; border-radius: 12px;"
@@ -589,10 +623,8 @@
           frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
-
       <!-- Contact Info -->
       <div class="col-lg-6 d-flex flex-column justify-content-center ps-lg-4" data-aos="fade-up" data-aos-delay="300">
-
         <!-- Address -->
         <div class="info-item d-flex align-items-start mb-4">
           <i class="bi bi-geo-alt flex-shrink-0" style="color: #555; font-size: 1.8rem;"></i>
@@ -601,7 +633,6 @@
             <p>Siolim, Marna, North Goa 403507, India</p>
           </div>
         </div>
-
         <!-- Phone -->
       <div class="info-item d-flex align-items-start mb-4">
         <i class="bi bi-telephone flex-shrink-0" style="color: #555; font-size: 1.8rem;"></i>
@@ -613,7 +644,6 @@
           </p>
         </div>
        </div>
-
         <!-- Email -->
         <div class="info-item d-flex align-items-start mb-4">
           <i class="bi bi-envelope flex-shrink-0" style="color: #555; font-size: 1.8rem;"></i>
@@ -626,14 +656,13 @@
             </p>
           </div>
         </div>
-
         <!-- Social Links -->
         <div class="social-links d-flex gap-4 mt-3 flex-wrap align-items-center">
           <a href="https://www.instagram.com/villacaetanogoa/" target="_blank" title="Instagram">
             <i class="bi bi-instagram" style="color: #E1306C; font-size: 2.5rem;"></i>
           </a>
           <a href="https://www.facebook.com/villacaetanogoa/" target="_blank" title="Facebook">
-            <i class="bi bi-facebook" style="color: #1877F2; font-size: 2.5rem;"></i>
+            <i class="bi bi-facebook" style="color: #1877F2;"></i>
           </a>
           <a href="https://www.threads.net/@villacaetanogoa" target="_blank" title="Threads">
             <i class="bi bi-threads" style="color: #000000; font-size: 2.5rem;"></i>
@@ -645,7 +674,6 @@
             <img src="assets/img/staymasterlogo.png" alt="Staymaster" style="height: 38px; width: auto;">
           </a>
         </div>
-
       </div>
     </div>
   </div>
@@ -653,7 +681,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
+      <a href="/" class="logo d-flex align-items-center justify-content-center mb-3">
         <img src="assets/img/logo.png" alt="Villa Caetano" style="max-height: 70px;" width="210" height="70">
       </a>
       <p>A lovely stay in an amazing location with a huge backyard garden area perfect for friends and family.</p>
@@ -671,12 +699,10 @@
       </div>
     </div>
   </footer>
-
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
-
 <!-- Floating WhatsApp Button (Hover Tooltip) -->
 <a href="https://wa.me/917020430564?text=Hi%2C%20I%27m%20interested%20in%20booking%20Villa%20Caetano.%20Could%20you%20please%20share%20availability%20and%20rates%3F"
    class="whatsapp-float"
@@ -689,7 +715,6 @@
    });">
   <i class="bi bi-whatsapp"></i>
 </a>
-
   <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -710,7 +735,6 @@
       });
     }
   </script>
-
   <!-- Cloudflare Web Analytics -->
   <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a33bc64874a74bb89b28c9961cbf05b8"}'></script>
   <!-- End Cloudflare Web Analytics -->
