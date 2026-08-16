@@ -6,15 +6,18 @@
   <title>Welcome Guide | Villa Caetano</title>
   <meta name="description" content="Guest guidebook for Villa Caetano in Siolim, North Goa — check-in, WiFi, contacts and local tips.">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="canonical" href="https://villacaetano.com/welcome">
+  <link rel="canonical" href="https://villacaetano.com/welcome.html">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://villacaetano.com/welcome">
+  <meta property="og:site_name" content="Villa Caetano">
+  <meta property="og:url" content="https://villacaetano.com/welcome.html">
   <meta property="og:title" content="Welcome Guide | Villa Caetano">
   <meta property="og:description" content="Guest guidebook for Villa Caetano — check-in, WiFi, contacts and local tips.">
   <meta property="og:image" content="https://villacaetano.com/assets/img/share-link-pic.jpg">
+  <meta property="og:image:secure_url" content="https://villacaetano.com/assets/img/share-link-pic.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -36,13 +39,18 @@
       --accent-dark: #25b585;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: #f2f4f7;
+      background: linear-gradient(180deg, #eef5f2 0%, #f2f4f7 40%, #f7f8fa 100%);
       color: #333;
       font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
     }
 
+    /* Small overlapping hero */
     .guide-hero-small {
       background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)),
                   url('assets/img/hero-bg.jpg') center/cover no-repeat;
@@ -93,14 +101,30 @@
       z-index: 2;
     }
 
+    /* Glass cards */
     .section-card {
-      background: white;
-      border-radius: 20px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 22px;
       padding: 26px 24px;
       margin-bottom: 22px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.055);
-      border: 1px solid rgba(0,0,0,0.03);
-      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.7);
+      transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2dc997, #7ee0c3);
+      opacity: 0.9;
     }
 
     .section-card:hover {
@@ -189,6 +213,8 @@
       margin: 4px 5px 4px 0;
       transition: all 0.25s ease;
       box-shadow: 0 3px 12px rgba(45, 201, 151, 0.22);
+      border: none;
+      cursor: pointer;
     }
 
     .contact-btn:hover {
@@ -197,9 +223,13 @@
       transform: translateY(-2px);
     }
 
-    .contact-btn.whatsapp { background: #25d366; }
+    .contact-btn:active {
+      transform: translateY(0) scale(0.97);
+    }
+
+    .contact-btn.whatsapp { background: #25d366; box-shadow: 0 3px 12px rgba(37,211,102,0.22); }
     .contact-btn.whatsapp:hover { background: #1ebe57; }
-    .contact-btn.call { background: #3498db; }
+    .contact-btn.call { background: #3498db; box-shadow: 0 3px 12px rgba(52,152,219,0.22); }
     .contact-btn.call:hover { background: #2980b9; }
 
     .quick-links a {
@@ -267,6 +297,15 @@
       color: #1a1a1a;
     }
 
+    #local ul li {
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+
+    #local ul li strong {
+      color: #1a1a1a;
+    }
+
     .accordion-button::after {
       background-size: 14px;
       width: 14px;
@@ -278,6 +317,14 @@
       background: transparent;
     }
 
+    .main-content .text-muted {
+      letter-spacing: 0.2px;
+    }
+
+    a.contact-btn[href*="g.page"]:hover {
+      background: #1557b0 !important;
+    }
+
     @media (max-width: 575px) {
       .appliance-grid { grid-template-columns: 1fr; }
       .guide-hero-small h1 { font-size: 1.9rem; }
@@ -285,16 +332,7 @@
       .guide-hero-small .staymaster-logo { max-height: 30px; }
       .main-content { margin-top: -35px; }
     }
-
-	  	a.contact-btn[href*="g.page"]:hover {
-        background: #1557b0 !important;
-        }
-
-	  
   </style>
-
-
-	
 </head>
 <body>
 
@@ -337,31 +375,42 @@
         </div>
       </div>
     </div>
-	
-	  
-	<!-- 2. LOCAL -->
-<div class="section-card" id="local" data-aos="fade-up">
-  <h2><i class="bi bi-geo-alt"></i> Local Recommendations</h2>
-  
-  <p>
-    Siolim is a quiet, leafy North Goa village — peaceful, yet only a short drive from Anjuna and Vagator beaches.
-  </p>
 
-  <p class="mb-2"><strong>Nearby favourites:</strong></p>
-  <ul style="padding-left: 18px; margin-bottom: 16px; font-size: 0.93rem; color: #555;">
-    <li><strong>Hosa</strong> — highly rated modern restaurant (about 6–8 min drive)</li>
-    <li><strong>One8 Commune</strong> — Virat Kohli’s riverside restaurant (about 10–15 min drive)</li>
-    <li><strong>Saiba</strong> — authentic Goan food, great for lunch (about 5–7 min)</li>
-    <li><strong>alag.</strong> — specialty coffee & desserts (about 5–7 min)</li>
-    <li><strong>Thalassa / Kiki by the Sea</strong> — sunset & riverside dining (about 10–15 min)</li>
-  </ul>
+    <!-- Quick Actions -->
+    <div class="section-card compact" data-aos="fade-up">
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="tel:+917908113022" class="contact-btn call" style="flex:1; justify-content:center;">
+          <i class="bi bi-telephone"></i> Call Caretaker
+        </a>
+        <a href="#wifi" class="contact-btn" style="flex:1; justify-content:center;">
+          <i class="bi bi-wifi"></i> WiFi
+        </a>
+        <a href="nearby.html" class="contact-btn" style="flex:1; justify-content:center; background:#6c5ce7; box-shadow:0 3px 12px rgba(108,92,231,0.25);">
+          <i class="bi bi-map"></i> Nearby
+        </a>
+      </div>
+    </div>
 
-  <div class="quick-links">
-    <a href="nearby.html">
-      <i class="bi bi-map"></i> Open Full Nearby Guide
-    </a>
-  </div>
-</div>
+    <!-- 2. LOCAL -->
+    <div class="section-card" id="local" data-aos="fade-up">
+      <h2><i class="bi bi-geo-alt"></i> Local Recommendations</h2>
+      <p>
+        Siolim is a quiet, leafy North Goa village — peaceful, yet only a short drive from Anjuna and Vagator beaches.
+      </p>
+      <p class="mb-2"><strong>Nearby favourites:</strong></p>
+      <ul style="padding-left: 18px; margin-bottom: 16px; font-size: 0.93rem; color: #555;">
+        <li><strong>Hosa</strong> — highly rated modern restaurant (about 6–8 min drive)</li>
+        <li><strong>One8 Commune</strong> — Virat Kohli’s riverside restaurant (about 10–15 min drive)</li>
+        <li><strong>Saiba</strong> — authentic Goan food, great for lunch (about 5–7 min)</li>
+        <li><strong>alag.</strong> — specialty coffee & desserts (about 5–7 min)</li>
+        <li><strong>Thalassa / Kiki by the Sea</strong> — sunset & riverside dining (about 10–15 min)</li>
+      </ul>
+      <div class="quick-links">
+        <a href="nearby.html">
+          <i class="bi bi-map"></i> Open Full Nearby Guide
+        </a>
+      </div>
+    </div>
 
     <!-- 3. WIFI -->
     <div class="section-card" id="wifi" data-aos="fade-up">
@@ -373,10 +422,13 @@
         </div>
         <div>
           <div class="label">Password</div>
-          <strong>Staymaster</strong>
+          <strong id="wifiPassword">Staymaster</strong>
         </div>
       </div>
       <p class="mb-3" style="font-size:0.92rem;">High-speed WiFi is available throughout the villa.</p>
+      <button class="contact-btn" onclick="copyWifi()" type="button">
+        <i class="bi bi-clipboard"></i> Copy Password
+      </button>
       <a href="wifi.html" class="contact-btn">
         <i class="bi bi-qr-code"></i> Open WiFi QR Page
       </a>
@@ -385,7 +437,6 @@
     <!-- 4. CARETAKER + HOST -->
     <div class="section-card" id="caretaker" data-aos="fade-up">
       <h2><i class="bi bi-person-badge"></i> Caretaker & Host Contact</h2>
-
       <p class="mb-2"><strong>Caretaker</strong> <span class="text-muted small">(available at all times)</span></p>
       <div class="mb-3">
         <a href="tel:+917908113022" class="contact-btn call">
@@ -396,7 +447,6 @@
           <i class="bi bi-whatsapp"></i> WhatsApp Caretaker
         </a>
       </div>
-
       <p class="mb-2"><strong>Host</strong></p>
       <div>
         <a href="tel:+919226934609" class="contact-btn call">
@@ -408,8 +458,6 @@
         </a>
       </div>
     </div>
-
-
 
     <!-- 5. EQUIPMENT -->
     <div class="section-card" id="equipment" data-aos="fade-up">
@@ -475,11 +523,11 @@
     <!-- 7. FAQ -->
     <div class="section-card" id="faq" data-aos="fade-up" style="padding:0; overflow:hidden;">
       <div class="accordion" id="faqMainAccordion">
-        <div class="accordion-item" style="border:none;">
+        <div class="accordion-item" style="border:none; background:transparent;">
           <h2 class="accordion-header" style="margin:0;">
             <button class="accordion-button collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#faqAll"
-                    style="background:white; box-shadow:none; font-weight:600; font-size:1.22rem; color:#1a1a1a; padding:22px 24px;">
+                    style="background:transparent; box-shadow:none; font-weight:600; font-size:1.22rem; color:#1a1a1a; padding:22px 24px;">
               <i class="bi bi-question-circle me-2" style="color:#2dc997; font-size:1.25rem;"></i>
               Frequently Asked Questions
             </button>
@@ -543,7 +591,6 @@
           <img src="assets/img/staymasterlogo.png" alt="Staymaster" style="height: 28px; width: auto;">
         </a>
       </h2>
-
       <p>Need help during your stay? We can assist with:</p>
       <ul class="mb-3">
         <li>Airport / taxi transfers</li>
@@ -554,7 +601,6 @@
         <li>Sightseeing recommendations</li>
         <li>Massage or wellness at the villa</li>
       </ul>
-
       <a href="https://wa.me/919226934609?text=Hi%2C%20I%20am%20staying%20at%20Villa%20Caetano%20and%20need%20some%20help"
          class="contact-btn whatsapp" target="_blank">
         <i class="bi bi-whatsapp"></i> Request Concierge Help
@@ -564,30 +610,25 @@
       </a>
     </div>
 
-	  
-	   <!-- Google Review Card -->
+    <!-- 9. GOOGLE REVIEW -->
     <div class="section-card" id="review" data-aos="fade-up" style="text-align:center;">
-     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
-       alt="Google" style="height:22px; margin-bottom:12px;">
-  
-   <h2 style="justify-content:center; margin-bottom:10px;">
-    Enjoyed your stay?
-   </h2>
-  
-   <p style="font-size:0.95rem; color:#555; margin-bottom:18px;">
-    Before you leave, a quick Google review would make our day.
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+           alt="Google" style="height:22px; margin-bottom:12px;">
+      <h2 style="justify-content:center; margin-bottom:10px;">
+        Enjoyed your stay?
+      </h2>
+      <p style="font-size:0.95rem; color:#555; margin-bottom:18px;">
+        Before you leave, a quick Google review would make our day.
       </p>
-  
-    <a href="https://g.page/r/CSmhO2K32fIWEBM/review" 
-     target="_blank" 
-     rel="noopener"
-     class="contact-btn"
-     style="background:#1a73e8; box-shadow:0 3px 12px rgba(26,115,232,0.25);">
-       <i class="bi bi-google"></i> Leave a Google Review
-       </a>
-     </div>
+      <a href="https://g.page/r/CSmhO2K32fIWEBM/review"
+         target="_blank"
+         rel="noopener"
+         class="contact-btn"
+         style="background:#1a73e8; box-shadow:0 3px 12px rgba(26,115,232,0.25);">
+        <i class="bi bi-google"></i> Leave a Google Review
+      </a>
+    </div>
 
-	  
     <!-- Footer -->
     <div class="text-center text-muted small py-4" data-aos="fade-up">
       <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
@@ -603,7 +644,25 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script>
-    AOS.init({ duration: 750, once: true, offset: 60 });
+    AOS.init({
+      duration: 700,
+      once: true,
+      offset: 50,
+      easing: 'ease-out-cubic'
+    });
+
+    function copyWifi() {
+      navigator.clipboard.writeText('Staymaster').then(() => {
+        const btn = document.querySelector('button[onclick="copyWifi()"]');
+        const original = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check2"></i> Copied!';
+        setTimeout(() => {
+          btn.innerHTML = original;
+        }, 2000);
+      }).catch(() => {
+        alert('Password: Staymaster');
+      });
+    }
   </script>
 </body>
 </html>
