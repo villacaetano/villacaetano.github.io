@@ -164,19 +164,28 @@
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
-    /* Footer social icons size */
-#footer .social-links a {
-  font-size: 1.6rem;
-  margin: 0 8px;
+  /* Contact social icons – keep them large and even */
+#contact .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease, color 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
-#footer .social-links a:hover {
-  transform: translateY(-3px);
-  color: #2dc997 !important;
+#contact .social-links a i {
+  font-size: 2.5rem !important;
+  line-height: 1;
+}
+
+#contact .social-links a:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+
+/* Keep image logos (Airbnb / Staymaster) same visual size */
+#contact .social-links a img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
     
   </style>
