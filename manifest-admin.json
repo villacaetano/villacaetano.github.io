@@ -1,6 +1,6 @@
 {
   "name": "Villa Caetano Admin",
-  "short_name": "Caetano Admin",
+  "short_name": "Admin",
   "start_url": "/admin.html",
   "scope": "/",
   "display": "standalone",
