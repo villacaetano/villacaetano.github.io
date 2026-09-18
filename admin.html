@@ -6,225 +6,120 @@
   <title>Admin | Villa Caetano</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/theme.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #f5f7fa;
-    }
-    .admin-header {
-      background: #1a1a1a;
-      color: white;
-      padding: 25px 0;
-      margin-bottom: 40px;
-    }
-    .admin-header h1 {
-      font-size: 1.6rem;
-      margin: 0;
-    }
-    .admin-header p {
-      margin: 5px 0 0;
-      opacity: 0.7;
-      font-size: 0.95rem;
-    }
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 18px;
-      color: #333;
-      border-bottom: 2px solid #2dc997;
-      display: inline-block;
-      padding-bottom: 4px;
-    }
-    .link-card {
-      background: white;
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: #222;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-      transition: all 0.25s ease;
-      border: 1px solid rgba(0,0,0,0.04);
-    }
-    .link-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.09);
-      color: #2dc997;
-    }
-    .link-card i {
-      font-size: 1.4rem;
-      width: 28px;
-      text-align: center;
-    }
-    .link-card span {
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-    .back-link {
-      color: #2dc997;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    .back-link:hover {
-      text-decoration: underline;
-    }
+    body{margin:0;background:#000;color:#f2f2f2;font-family:Inter,system-ui,sans-serif}
+    .wrap{max-width:1140px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+    .brand{display:block;text-align:center;margin-bottom:1.6rem}
+    .brand img{height:42px;width:auto;filter:brightness(0) invert(1)}
+    .admin-top{margin-bottom:2.2rem;text-align:center}
+    .eyebrow{display:block;color:#8f8f8f;font-size:.95rem;font-weight:300;margin-bottom:.2rem}
+    h1{font-size:clamp(2rem,4vw,3rem);font-weight:500;margin:0;letter-spacing:-.03em}
+    .section-title{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#8f8f8f;margin:0 0 1rem}
+    .link-card{background:#141414;border:1px solid #242424;border-radius:1.25rem;padding:1rem 1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.85rem;text-decoration:none;color:#f2f2f2;min-height:58px}
+    .link-card:hover{background:#1c1c1c;color:#fff}
+    .link-card img,.link-card svg,.fav-btn img,.fav-btn svg{width:22px;height:22px;flex-shrink:0}
+    .link-card span{font-weight:500}
+    .fav-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin-bottom:2.5rem}
+    @media(min-width:768px){.fav-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .fav-btn{display:flex;flex-direction:column;justify-content:center;gap:.35rem;background:#141414;border:1px solid #242424;border-radius:1.4rem;padding:1.15rem 1.1rem;text-decoration:none;color:#fff;min-height:104px}
+    .fav-btn .top{display:flex;align-items:center;gap:.55rem}
+    .fav-btn span{font-size:.75rem;color:#8f8f8f;font-weight:300}
+    .fav-btn strong{font-size:1.05rem;font-weight:500}
+    .fav-btn.airbnb{background:#fff;color:#111;border-color:#fff}
+    .fav-btn.airbnb span{color:#666}
+    .fav-btn.owner{background:#1f6f66;border-color:#1f6f66}
+    .fav-btn.owner span{color:#d7f3ee}
   </style>
 </head>
 <body>
+  <!--
+    ADD FAVOURITE:
+    <a class="fav-btn" href="URL">
+      <div class="top"><img src="https://cdn.simpleicons.org/NAME/ffffff" alt=""> <span>Label</span></div>
+      <strong>Title</strong>
+    </a>
+  -->
 
-  <div class="admin-header">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div>
-        <h1>Villa Caetano Admin</h1>
-        <p>Quick access to all important links</p>
-      </div>
-      <a href="/" class="back-link">← Back to Website</a>
+  <div class="wrap">
+    <a href="/" class="brand">
+      <img src="assets/img/logo.png" alt="Villa Caetano">
+    </a>
+    <div class="admin-top">
+      <h1>Admin</h1>
     </div>
-  </div>
 
-  <div class="container pb-5">
+    <!-- FAVOURITES -->
+    <div class="section-title">Favourites</div>
+    <div class="fav-grid">
+      <a class="fav-btn airbnb" href="https://www.airbnb.co.in/rooms/1704891866347043281" target="_blank" rel="noopener">
+        <div class="top"><img src="https://cdn.simpleicons.org/airbnb/FF5A5F" alt=""> <span>Villa Caetano Listing</span></div>
+        <strong>Airbnb</strong>
+      </a>
+      <a class="fav-btn owner" href="https://staymaster.s.gy/caetano-villa-3bhk" target="_blank" rel="noopener">
+        <div class="top"><img src="assets/img/staymasterlogo.png" alt="" style="height:16px;width:auto;background:#fff;padding:2px 5px;border-radius:4px"> <span>Staymaster</span></div>
+        <strong>Owner dashboard</strong>
+      </a>
+      <a class="fav-btn" href="welcome.html">
+        <div class="top"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4h11a2 2 0 0 1 2 2v14H8a2 2 0 0 0-2 2V4zm2 2v12.5c.3-.2.7-.3 1.1-.3H17V6H8z"/></svg> <span>Guests</span></div>
+        <strong>Welcome guide</strong>
+      </a>
+      <a class="fav-btn" href="guestcard.html">
+        <div class="top"><svg viewBox="0 0 24 24" fill="#fff"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm10 0h2v2h-2v-2zm4-2h2v2h-2v-2zm-2 4h2v2h-2v-2zm2 2h2v2h-2v-2zm-4 0h2v4h-2v-4zm4 2h2v2h-2v-2z"/></svg> <span>Guests</span></div>
+        <strong>Guest card QR</strong>
+      </a>
+      <a class="fav-btn" href="https://wa.me/917020430564" target="_blank" rel="noopener">
+        <div class="top"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt=""> <span>Chat</span></div>
+        <strong>WhatsApp</strong>
+      </a>
+      <a class="fav-btn" href="nearby.html">
+        <div class="top"><img src="https://cdn.simpleicons.org/googlemaps/EA4335" alt=""> <span>Local</span></div>
+        <strong>Nearby</strong>
+      </a>
+    </div>
+
     <div class="row g-4">
-
-      <!-- BOOKING PLATFORMS -->
       <div class="col-md-6 col-lg-4">
-        <div class="section-title">Booking Platforms</div>
-
-        <a href="https://www.airbnb.co.in/rooms/1704891866347043281" target="_blank" class="link-card">
-          <i class="bi bi-house-heart" style="color:#FF5A5F;"></i>
-          <span>Airbnb Listing</span>
-        </a>
-
-        <a href="https://staymaster.in/property-details/caetano" target="_blank" class="link-card">
-          <i class="bi bi-building" style="color:#2dc997;"></i>
-          <span>Staymaster</span>
-        </a>
-
-        <a href="https://www.booking.com/" target="_blank" class="link-card">
-          <i class="bi bi-calendar-check" style="color:#003580;"></i>
-          <span>Booking.com</span>
-        </a>
-
-        <a href="https://www.goibibo.com/" target="_blank" class="link-card">
-          <i class="bi bi-airplane" style="color:#ff6600;"></i>
-          <span>Goibibo</span>
-        </a>
-
-        <a href="https://www.makemytrip.com/" target="_blank" class="link-card">
-          <i class="bi bi-briefcase" style="color:#e71c23;"></i>
-          <span>MakeMyTrip</span>
-        </a>
+        <div class="section-title">Booking platforms</div>
+        <a href="https://www.airbnb.co.in/rooms/1704891866347043281" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/airbnb/FF5A5F" alt=""><span>Airbnb Listing</span></a>
+        <a href="https://staymaster.in/property-details/caetano" target="_blank" class="link-card"><img src="assets/img/staymasterlogo.png" alt="" style="height:16px;width:auto;background:#fff;padding:2px 5px;border-radius:4px"><span>Staymaster</span></a>
+        <a href="https://www.booking.com/" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/bookingdotcom/003B95" alt=""><span>Booking.com</span></a>
+        <a href="https://www.goibibo.com/" target="_blank" class="link-card"><svg viewBox="0 0 24 24" fill="#FF6600"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><span>Goibibo</span></a>
+        <a href="https://www.makemytrip.com/" target="_blank" class="link-card"><svg viewBox="0 0 24 24" fill="#E71C23"><path d="M6 7V5h12v2h3v2H3V7h3zm1 4h10v9H7v-9z"/></svg><span>MakeMyTrip</span></a>
       </div>
 
-      <!-- SOCIAL MEDIA -->
       <div class="col-md-6 col-lg-4">
-        <div class="section-title">Social Media</div>
-
-        <a href="https://www.instagram.com/villacaetanogoa/" target="_blank" class="link-card">
-          <i class="bi bi-instagram" style="color:#E1306C;"></i>
-          <span>Instagram</span>
-        </a>
-
-        <a href="https://www.facebook.com/villacaetanogoa/" target="_blank" class="link-card">
-          <i class="bi bi-facebook" style="color:#1877F2;"></i>
-          <span>Facebook</span>
-        </a>
-
-        <a href="https://www.threads.net/@villacaetanogoa" target="_blank" class="link-card">
-          <i class="bi bi-threads" style="color:#000;"></i>
-          <span>Threads</span>
-        </a>
-
-        <a href="https://wa.me/917020430564" target="_blank" class="link-card">
-          <i class="bi bi-whatsapp" style="color:#25D366;"></i>
-          <span>WhatsApp</span>
-        </a>
+        <div class="section-title">Social media</div>
+        <a href="https://www.instagram.com/villacaetanogoa/" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt=""><span>Instagram</span></a>
+        <a href="https://www.facebook.com/villacaetanogoa/" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt=""><span>Facebook</span></a>
+        <a href="https://www.threads.net/@villacaetanogoa" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/threads/ffffff" alt=""><span>Threads</span></a>
+        <a href="https://wa.me/917020430564" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt=""><span>WhatsApp</span></a>
       </div>
 
-      <!-- ANALYTICS & TOOLS -->
       <div class="col-md-6 col-lg-4">
-        <div class="section-title">Analytics & Tools</div>
-
-        <a href="https://analytics.google.com/" target="_blank" class="link-card">
-          <i class="bi bi-graph-up" style="color:#F9AB00;"></i>
-          <span>Google Analytics</span>
-        </a>
-
-        <a href="https://dash.cloudflare.com/" target="_blank" class="link-card">
-          <i class="bi bi-cloud" style="color:#F6821F;"></i>
-          <span>Cloudflare Analytics</span>
-        </a>
-
-        <a href="https://pagespeed.web.dev/analysis?url=https://villacaetano.com" target="_blank" class="link-card">
-          <i class="bi bi-speedometer2" style="color:#4285F4;"></i>
-          <span>PageSpeed Insights</span>
-        </a>
-
-        <a href="https://search.google.com/search-console" target="_blank" class="link-card">
-          <i class="bi bi-search" style="color:#34A853;"></i>
-          <span>Google Search Console</span>
-        </a>
-
-        <a href="https://g.page/r/CSmhO2K32fIWEBM/review" target="_blank" class="link-card">
-          <i class="bi bi-star" style="color:#FBBC05;"></i>
-          <span>Google Reviews Link</span>
-        </a>
+        <div class="section-title">Analytics &amp; tools</div>
+        <a href="https://analytics.google.com/" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt=""><span>Google Analytics</span></a>
+        <a href="https://dash.cloudflare.com/" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/cloudflare/F6821F" alt=""><span>Cloudflare Analytics</span></a>
+        <a href="https://pagespeed.web.dev/analysis?url=https://villacaetano.com" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/google/4285F4" alt=""><span>PageSpeed Insights</span></a>
+        <a href="https://search.google.com/search-console" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/google/34A853" alt=""><span>Google Search Console</span></a>
+        <a href="https://g.page/r/CSmhO2K32fIWEBM/review" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/google/FBBC05" alt=""><span>Google Reviews Link</span></a>
       </div>
 
-      <!-- OWNER / USEFUL -->
       <div class="col-md-6 col-lg-4">
-        <div class="section-title">Owner Tools</div>
-
-        <a href="https://staymaster.s.gy/caetano-villa-3bhk" target="_blank" class="link-card">
-          <i class="bi bi-speedometer" style="color:#2dc997;"></i>
-          <span>Staymaster Owner Dashboard</span>
-        </a>
-
-        <a href="welcome.html" target="_blank" class="link-card">
-          <i class="bi bi-journal-text" style="color:#2dc997;"></i>
-          <span>Guest Welcome Guide</span>
-        </a>
-
-		    <a href="guestcard.html" target="_blank" class="link-card">
-          <i class="bi bi-qr-code-scan" style="color:#2dc997;"></i>
-          <span>Guest Card QR </span>
-        </a>
-
-	
-		
-        <a href="nearby.html" class="link-card">
-          <i class="bi bi-geo-alt" style="color:#e74c3c;"></i>
-          <span>Nearby Page</span>
-        </a>
-
-        <a href="wifi.html" class="link-card">
-          <i class="bi bi-wifi" style="color:#3498db;"></i>
-          <span>WiFi Page</span>
-        </a>
+        <div class="section-title">Owner tools</div>
+        <a href="https://staymaster.s.gy/caetano-villa-3bhk" target="_blank" class="link-card"><img src="assets/img/staymasterlogo.png" alt="" style="height:16px;width:auto;background:#fff;padding:2px 5px;border-radius:4px"><span>Staymaster Owner Dashboard</span></a>
+        <a href="welcome.html" class="link-card"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4h11a2 2 0 0 1 2 2v14H8a2 2 0 0 0-2 2V4zm2 2v12.5c.3-.2.7-.3 1.1-.3H17V6H8z"/></svg><span>Guest Welcome Guide</span></a>
+        <a href="guestcard.html" class="link-card"><svg viewBox="0 0 24 24" fill="#fff"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm10 0h2v2h-2v-2zm4-2h2v2h-2v-2zm-2 4h2v2h-2v-2zm2 2h2v2h-2v-2zm-4 0h2v4h-2v-4zm4 2h2v2h-2v-2z"/></svg><span>Guest Card QR</span></a>
+        <a href="nearby.html" class="link-card"><img src="https://cdn.simpleicons.org/googlemaps/EA4335" alt=""><span>Nearby Page</span></a>
+        <a href="wifi.html" class="link-card"><svg viewBox="0 0 24 24" fill="#60A5FA"><path d="M12 18.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm0-5.2a6.2 6.2 0 0 1 4.4 1.8l-1.5 1.5A4.1 4.1 0 0 0 12 15.2a4.1 4.1 0 0 0-2.9 1.2L7.6 15a6.2 6.2 0 0 1 4.4-1.7zM12 8a10.4 10.4 0 0 1 7.4 3.1l-1.5 1.5A8.3 8.3 0 0 0 12 10.1a8.3 8.3 0 0 0-5.9 2.5L4.6 11A10.4 10.4 0 0 1 12 8z"/></svg><span>WiFi Page</span></a>
       </div>
 
-      <!-- EXTRA USEFUL TOOLS -->
       <div class="col-md-6 col-lg-4">
-        <div class="section-title">Extra Tools</div>
-
-        <a href="https://www.canva.com/" target="_blank" class="link-card">
-          <i class="bi bi-palette" style="color:#00C4CC;"></i>
-          <span>Canva</span>
-        </a>
-
-        <a href="https://github.com/" target="_blank" class="link-card">
-          <i class="bi bi-github" style="color:#333;"></i>
-          <span>GitHub</span>
-        </a>
+        <div class="section-title">Extra tools</div>
+        <a href="https://github.com/villacaetano" target="_blank" class="link-card"><img src="https://cdn.simpleicons.org/github/ffffff" alt=""><span>GitHub</span></a>
       </div>
-
     </div>
   </div>
-
 </body>
 </html>
