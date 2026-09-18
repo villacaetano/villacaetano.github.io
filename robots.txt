@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Disallow: /welcome.html
+
 Sitemap: https://villacaetano.com/sitemap.xml
